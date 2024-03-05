@@ -3,6 +3,9 @@ package pactus.blockchain;
 import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
+ * <pre>
+ * Blockchain service defines RPC methods for interacting with the blockchain.
+ * </pre>
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.50.2)",
@@ -370,10 +373,17 @@ public final class BlockchainGrpc {
   }
 
   /**
+   * <pre>
+   * Blockchain service defines RPC methods for interacting with the blockchain.
+   * </pre>
    */
   public static abstract class BlockchainImplBase implements io.grpc.BindableService {
 
     /**
+     * <pre>
+     * GetBlock retrieves information about a block based on the provided request
+     * parameters.
+     * </pre>
      */
     public void getBlock(pactus.blockchain.BlockchainOuterClass.GetBlockRequest request,
         io.grpc.stub.StreamObserver<pactus.blockchain.BlockchainOuterClass.GetBlockResponse> responseObserver) {
@@ -381,6 +391,9 @@ public final class BlockchainGrpc {
     }
 
     /**
+     * <pre>
+     * GetBlockHash retrieves the hash of a block at the specified height.
+     * </pre>
      */
     public void getBlockHash(pactus.blockchain.BlockchainOuterClass.GetBlockHashRequest request,
         io.grpc.stub.StreamObserver<pactus.blockchain.BlockchainOuterClass.GetBlockHashResponse> responseObserver) {
@@ -388,6 +401,9 @@ public final class BlockchainGrpc {
     }
 
     /**
+     * <pre>
+     * GetBlockHeight retrieves the height of a block with the specified hash.
+     * </pre>
      */
     public void getBlockHeight(pactus.blockchain.BlockchainOuterClass.GetBlockHeightRequest request,
         io.grpc.stub.StreamObserver<pactus.blockchain.BlockchainOuterClass.GetBlockHeightResponse> responseObserver) {
@@ -395,6 +411,9 @@ public final class BlockchainGrpc {
     }
 
     /**
+     * <pre>
+     * GetBlockchainInfo retrieves general information about the blockchain.
+     * </pre>
      */
     public void getBlockchainInfo(pactus.blockchain.BlockchainOuterClass.GetBlockchainInfoRequest request,
         io.grpc.stub.StreamObserver<pactus.blockchain.BlockchainOuterClass.GetBlockchainInfoResponse> responseObserver) {
@@ -402,6 +421,9 @@ public final class BlockchainGrpc {
     }
 
     /**
+     * <pre>
+     * GetConsensusInfo retrieves information about the consensus instances.
+     * </pre>
      */
     public void getConsensusInfo(pactus.blockchain.BlockchainOuterClass.GetConsensusInfoRequest request,
         io.grpc.stub.StreamObserver<pactus.blockchain.BlockchainOuterClass.GetConsensusInfoResponse> responseObserver) {
@@ -409,6 +431,10 @@ public final class BlockchainGrpc {
     }
 
     /**
+     * <pre>
+     * GetAccount retrieves information about an account based on the provided
+     * address.
+     * </pre>
      */
     public void getAccount(pactus.blockchain.BlockchainOuterClass.GetAccountRequest request,
         io.grpc.stub.StreamObserver<pactus.blockchain.BlockchainOuterClass.GetAccountResponse> responseObserver) {
@@ -416,6 +442,10 @@ public final class BlockchainGrpc {
     }
 
     /**
+     * <pre>
+     * GetValidator retrieves information about a validator based on the provided
+     * address.
+     * </pre>
      */
     public void getValidator(pactus.blockchain.BlockchainOuterClass.GetValidatorRequest request,
         io.grpc.stub.StreamObserver<pactus.blockchain.BlockchainOuterClass.GetValidatorResponse> responseObserver) {
@@ -423,6 +453,10 @@ public final class BlockchainGrpc {
     }
 
     /**
+     * <pre>
+     * GetValidatorByNumber retrieves information about a validator based on the
+     * provided number.
+     * </pre>
      */
     public void getValidatorByNumber(pactus.blockchain.BlockchainOuterClass.GetValidatorByNumberRequest request,
         io.grpc.stub.StreamObserver<pactus.blockchain.BlockchainOuterClass.GetValidatorResponse> responseObserver) {
@@ -430,6 +464,9 @@ public final class BlockchainGrpc {
     }
 
     /**
+     * <pre>
+     * GetValidatorAddresses retrieves a list of all validator addresses.
+     * </pre>
      */
     public void getValidatorAddresses(pactus.blockchain.BlockchainOuterClass.GetValidatorAddressesRequest request,
         io.grpc.stub.StreamObserver<pactus.blockchain.BlockchainOuterClass.GetValidatorAddressesResponse> responseObserver) {
@@ -437,6 +474,10 @@ public final class BlockchainGrpc {
     }
 
     /**
+     * <pre>
+     * GetPublicKey retrieves the public key of an account based on the provided
+     * address.
+     * </pre>
      */
     public void getPublicKey(pactus.blockchain.BlockchainOuterClass.GetPublicKeyRequest request,
         io.grpc.stub.StreamObserver<pactus.blockchain.BlockchainOuterClass.GetPublicKeyResponse> responseObserver) {
@@ -520,6 +561,9 @@ public final class BlockchainGrpc {
   }
 
   /**
+   * <pre>
+   * Blockchain service defines RPC methods for interacting with the blockchain.
+   * </pre>
    */
   public static final class BlockchainStub extends io.grpc.stub.AbstractAsyncStub<BlockchainStub> {
     private BlockchainStub(
@@ -534,6 +578,10 @@ public final class BlockchainGrpc {
     }
 
     /**
+     * <pre>
+     * GetBlock retrieves information about a block based on the provided request
+     * parameters.
+     * </pre>
      */
     public void getBlock(pactus.blockchain.BlockchainOuterClass.GetBlockRequest request,
         io.grpc.stub.StreamObserver<pactus.blockchain.BlockchainOuterClass.GetBlockResponse> responseObserver) {
@@ -542,6 +590,9 @@ public final class BlockchainGrpc {
     }
 
     /**
+     * <pre>
+     * GetBlockHash retrieves the hash of a block at the specified height.
+     * </pre>
      */
     public void getBlockHash(pactus.blockchain.BlockchainOuterClass.GetBlockHashRequest request,
         io.grpc.stub.StreamObserver<pactus.blockchain.BlockchainOuterClass.GetBlockHashResponse> responseObserver) {
@@ -550,6 +601,9 @@ public final class BlockchainGrpc {
     }
 
     /**
+     * <pre>
+     * GetBlockHeight retrieves the height of a block with the specified hash.
+     * </pre>
      */
     public void getBlockHeight(pactus.blockchain.BlockchainOuterClass.GetBlockHeightRequest request,
         io.grpc.stub.StreamObserver<pactus.blockchain.BlockchainOuterClass.GetBlockHeightResponse> responseObserver) {
@@ -558,6 +612,9 @@ public final class BlockchainGrpc {
     }
 
     /**
+     * <pre>
+     * GetBlockchainInfo retrieves general information about the blockchain.
+     * </pre>
      */
     public void getBlockchainInfo(pactus.blockchain.BlockchainOuterClass.GetBlockchainInfoRequest request,
         io.grpc.stub.StreamObserver<pactus.blockchain.BlockchainOuterClass.GetBlockchainInfoResponse> responseObserver) {
@@ -566,6 +623,9 @@ public final class BlockchainGrpc {
     }
 
     /**
+     * <pre>
+     * GetConsensusInfo retrieves information about the consensus instances.
+     * </pre>
      */
     public void getConsensusInfo(pactus.blockchain.BlockchainOuterClass.GetConsensusInfoRequest request,
         io.grpc.stub.StreamObserver<pactus.blockchain.BlockchainOuterClass.GetConsensusInfoResponse> responseObserver) {
@@ -574,6 +634,10 @@ public final class BlockchainGrpc {
     }
 
     /**
+     * <pre>
+     * GetAccount retrieves information about an account based on the provided
+     * address.
+     * </pre>
      */
     public void getAccount(pactus.blockchain.BlockchainOuterClass.GetAccountRequest request,
         io.grpc.stub.StreamObserver<pactus.blockchain.BlockchainOuterClass.GetAccountResponse> responseObserver) {
@@ -582,6 +646,10 @@ public final class BlockchainGrpc {
     }
 
     /**
+     * <pre>
+     * GetValidator retrieves information about a validator based on the provided
+     * address.
+     * </pre>
      */
     public void getValidator(pactus.blockchain.BlockchainOuterClass.GetValidatorRequest request,
         io.grpc.stub.StreamObserver<pactus.blockchain.BlockchainOuterClass.GetValidatorResponse> responseObserver) {
@@ -590,6 +658,10 @@ public final class BlockchainGrpc {
     }
 
     /**
+     * <pre>
+     * GetValidatorByNumber retrieves information about a validator based on the
+     * provided number.
+     * </pre>
      */
     public void getValidatorByNumber(pactus.blockchain.BlockchainOuterClass.GetValidatorByNumberRequest request,
         io.grpc.stub.StreamObserver<pactus.blockchain.BlockchainOuterClass.GetValidatorResponse> responseObserver) {
@@ -598,6 +670,9 @@ public final class BlockchainGrpc {
     }
 
     /**
+     * <pre>
+     * GetValidatorAddresses retrieves a list of all validator addresses.
+     * </pre>
      */
     public void getValidatorAddresses(pactus.blockchain.BlockchainOuterClass.GetValidatorAddressesRequest request,
         io.grpc.stub.StreamObserver<pactus.blockchain.BlockchainOuterClass.GetValidatorAddressesResponse> responseObserver) {
@@ -606,6 +681,10 @@ public final class BlockchainGrpc {
     }
 
     /**
+     * <pre>
+     * GetPublicKey retrieves the public key of an account based on the provided
+     * address.
+     * </pre>
      */
     public void getPublicKey(pactus.blockchain.BlockchainOuterClass.GetPublicKeyRequest request,
         io.grpc.stub.StreamObserver<pactus.blockchain.BlockchainOuterClass.GetPublicKeyResponse> responseObserver) {
@@ -615,6 +694,9 @@ public final class BlockchainGrpc {
   }
 
   /**
+   * <pre>
+   * Blockchain service defines RPC methods for interacting with the blockchain.
+   * </pre>
    */
   public static final class BlockchainBlockingStub extends io.grpc.stub.AbstractBlockingStub<BlockchainBlockingStub> {
     private BlockchainBlockingStub(
@@ -629,6 +711,10 @@ public final class BlockchainGrpc {
     }
 
     /**
+     * <pre>
+     * GetBlock retrieves information about a block based on the provided request
+     * parameters.
+     * </pre>
      */
     public pactus.blockchain.BlockchainOuterClass.GetBlockResponse getBlock(pactus.blockchain.BlockchainOuterClass.GetBlockRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -636,6 +722,9 @@ public final class BlockchainGrpc {
     }
 
     /**
+     * <pre>
+     * GetBlockHash retrieves the hash of a block at the specified height.
+     * </pre>
      */
     public pactus.blockchain.BlockchainOuterClass.GetBlockHashResponse getBlockHash(pactus.blockchain.BlockchainOuterClass.GetBlockHashRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -643,6 +732,9 @@ public final class BlockchainGrpc {
     }
 
     /**
+     * <pre>
+     * GetBlockHeight retrieves the height of a block with the specified hash.
+     * </pre>
      */
     public pactus.blockchain.BlockchainOuterClass.GetBlockHeightResponse getBlockHeight(pactus.blockchain.BlockchainOuterClass.GetBlockHeightRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -650,6 +742,9 @@ public final class BlockchainGrpc {
     }
 
     /**
+     * <pre>
+     * GetBlockchainInfo retrieves general information about the blockchain.
+     * </pre>
      */
     public pactus.blockchain.BlockchainOuterClass.GetBlockchainInfoResponse getBlockchainInfo(pactus.blockchain.BlockchainOuterClass.GetBlockchainInfoRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -657,6 +752,9 @@ public final class BlockchainGrpc {
     }
 
     /**
+     * <pre>
+     * GetConsensusInfo retrieves information about the consensus instances.
+     * </pre>
      */
     public pactus.blockchain.BlockchainOuterClass.GetConsensusInfoResponse getConsensusInfo(pactus.blockchain.BlockchainOuterClass.GetConsensusInfoRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -664,6 +762,10 @@ public final class BlockchainGrpc {
     }
 
     /**
+     * <pre>
+     * GetAccount retrieves information about an account based on the provided
+     * address.
+     * </pre>
      */
     public pactus.blockchain.BlockchainOuterClass.GetAccountResponse getAccount(pactus.blockchain.BlockchainOuterClass.GetAccountRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -671,6 +773,10 @@ public final class BlockchainGrpc {
     }
 
     /**
+     * <pre>
+     * GetValidator retrieves information about a validator based on the provided
+     * address.
+     * </pre>
      */
     public pactus.blockchain.BlockchainOuterClass.GetValidatorResponse getValidator(pactus.blockchain.BlockchainOuterClass.GetValidatorRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -678,6 +784,10 @@ public final class BlockchainGrpc {
     }
 
     /**
+     * <pre>
+     * GetValidatorByNumber retrieves information about a validator based on the
+     * provided number.
+     * </pre>
      */
     public pactus.blockchain.BlockchainOuterClass.GetValidatorResponse getValidatorByNumber(pactus.blockchain.BlockchainOuterClass.GetValidatorByNumberRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -685,6 +795,9 @@ public final class BlockchainGrpc {
     }
 
     /**
+     * <pre>
+     * GetValidatorAddresses retrieves a list of all validator addresses.
+     * </pre>
      */
     public pactus.blockchain.BlockchainOuterClass.GetValidatorAddressesResponse getValidatorAddresses(pactus.blockchain.BlockchainOuterClass.GetValidatorAddressesRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -692,6 +805,10 @@ public final class BlockchainGrpc {
     }
 
     /**
+     * <pre>
+     * GetPublicKey retrieves the public key of an account based on the provided
+     * address.
+     * </pre>
      */
     public pactus.blockchain.BlockchainOuterClass.GetPublicKeyResponse getPublicKey(pactus.blockchain.BlockchainOuterClass.GetPublicKeyRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -700,6 +817,9 @@ public final class BlockchainGrpc {
   }
 
   /**
+   * <pre>
+   * Blockchain service defines RPC methods for interacting with the blockchain.
+   * </pre>
    */
   public static final class BlockchainFutureStub extends io.grpc.stub.AbstractFutureStub<BlockchainFutureStub> {
     private BlockchainFutureStub(
@@ -714,6 +834,10 @@ public final class BlockchainGrpc {
     }
 
     /**
+     * <pre>
+     * GetBlock retrieves information about a block based on the provided request
+     * parameters.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<pactus.blockchain.BlockchainOuterClass.GetBlockResponse> getBlock(
         pactus.blockchain.BlockchainOuterClass.GetBlockRequest request) {
@@ -722,6 +846,9 @@ public final class BlockchainGrpc {
     }
 
     /**
+     * <pre>
+     * GetBlockHash retrieves the hash of a block at the specified height.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<pactus.blockchain.BlockchainOuterClass.GetBlockHashResponse> getBlockHash(
         pactus.blockchain.BlockchainOuterClass.GetBlockHashRequest request) {
@@ -730,6 +857,9 @@ public final class BlockchainGrpc {
     }
 
     /**
+     * <pre>
+     * GetBlockHeight retrieves the height of a block with the specified hash.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<pactus.blockchain.BlockchainOuterClass.GetBlockHeightResponse> getBlockHeight(
         pactus.blockchain.BlockchainOuterClass.GetBlockHeightRequest request) {
@@ -738,6 +868,9 @@ public final class BlockchainGrpc {
     }
 
     /**
+     * <pre>
+     * GetBlockchainInfo retrieves general information about the blockchain.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<pactus.blockchain.BlockchainOuterClass.GetBlockchainInfoResponse> getBlockchainInfo(
         pactus.blockchain.BlockchainOuterClass.GetBlockchainInfoRequest request) {
@@ -746,6 +879,9 @@ public final class BlockchainGrpc {
     }
 
     /**
+     * <pre>
+     * GetConsensusInfo retrieves information about the consensus instances.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<pactus.blockchain.BlockchainOuterClass.GetConsensusInfoResponse> getConsensusInfo(
         pactus.blockchain.BlockchainOuterClass.GetConsensusInfoRequest request) {
@@ -754,6 +890,10 @@ public final class BlockchainGrpc {
     }
 
     /**
+     * <pre>
+     * GetAccount retrieves information about an account based on the provided
+     * address.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<pactus.blockchain.BlockchainOuterClass.GetAccountResponse> getAccount(
         pactus.blockchain.BlockchainOuterClass.GetAccountRequest request) {
@@ -762,6 +902,10 @@ public final class BlockchainGrpc {
     }
 
     /**
+     * <pre>
+     * GetValidator retrieves information about a validator based on the provided
+     * address.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<pactus.blockchain.BlockchainOuterClass.GetValidatorResponse> getValidator(
         pactus.blockchain.BlockchainOuterClass.GetValidatorRequest request) {
@@ -770,6 +914,10 @@ public final class BlockchainGrpc {
     }
 
     /**
+     * <pre>
+     * GetValidatorByNumber retrieves information about a validator based on the
+     * provided number.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<pactus.blockchain.BlockchainOuterClass.GetValidatorResponse> getValidatorByNumber(
         pactus.blockchain.BlockchainOuterClass.GetValidatorByNumberRequest request) {
@@ -778,6 +926,9 @@ public final class BlockchainGrpc {
     }
 
     /**
+     * <pre>
+     * GetValidatorAddresses retrieves a list of all validator addresses.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<pactus.blockchain.BlockchainOuterClass.GetValidatorAddressesResponse> getValidatorAddresses(
         pactus.blockchain.BlockchainOuterClass.GetValidatorAddressesRequest request) {
@@ -786,6 +937,10 @@ public final class BlockchainGrpc {
     }
 
     /**
+     * <pre>
+     * GetPublicKey retrieves the public key of an account based on the provided
+     * address.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<pactus.blockchain.BlockchainOuterClass.GetPublicKeyResponse> getPublicKey(
         pactus.blockchain.BlockchainOuterClass.GetPublicKeyRequest request) {

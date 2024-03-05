@@ -19,6 +19,10 @@ public final class NetworkOuterClass {
       com.google.protobuf.MessageOrBuilder {
   }
   /**
+   * <pre>
+   * Request message for retrieving overall network information.
+   * </pre>
+   *
    * Protobuf type {@code pactus.GetNetworkInfoRequest}
    */
   public static final class GetNetworkInfoRequest extends
@@ -203,6 +207,10 @@ public final class NetworkOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Request message for retrieving overall network information.
+     * </pre>
+     *
      * Protobuf type {@code pactus.GetNetworkInfoRequest}
      */
     public static final class Builder extends
@@ -419,11 +427,19 @@ public final class NetworkOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Name of the network.
+     * </pre>
+     *
      * <code>string network_name = 1 [json_name = "networkName"];</code>
      * @return The networkName.
      */
     java.lang.String getNetworkName();
     /**
+     * <pre>
+     * Name of the network.
+     * </pre>
+     *
      * <code>string network_name = 1 [json_name = "networkName"];</code>
      * @return The bytes for networkName.
      */
@@ -431,52 +447,92 @@ public final class NetworkOuterClass {
         getNetworkNameBytes();
 
     /**
+     * <pre>
+     * Total bytes sent across the network.
+     * </pre>
+     *
      * <code>uint32 total_sent_bytes = 2 [json_name = "totalSentBytes"];</code>
      * @return The totalSentBytes.
      */
     int getTotalSentBytes();
 
     /**
+     * <pre>
+     * Total bytes received across the network.
+     * </pre>
+     *
      * <code>uint32 total_received_bytes = 3 [json_name = "totalReceivedBytes"];</code>
      * @return The totalReceivedBytes.
      */
     int getTotalReceivedBytes();
 
     /**
+     * <pre>
+     * Number of connected peers.
+     * </pre>
+     *
      * <code>uint32 connected_peers_count = 4 [json_name = "connectedPeersCount"];</code>
      * @return The connectedPeersCount.
      */
     int getConnectedPeersCount4();
 
     /**
+     * <pre>
+     * List of connected peers.
+     * </pre>
+     *
      * <code>repeated .pactus.PeerInfo connected_peers = 5 [json_name = "connectedPeers"];</code>
      */
     java.util.List<pactus.network.NetworkOuterClass.PeerInfo> 
         getConnectedPeers5List();
     /**
+     * <pre>
+     * List of connected peers.
+     * </pre>
+     *
      * <code>repeated .pactus.PeerInfo connected_peers = 5 [json_name = "connectedPeers"];</code>
      */
     pactus.network.NetworkOuterClass.PeerInfo getConnectedPeers5(int index);
     /**
+     * <pre>
+     * List of connected peers.
+     * </pre>
+     *
      * <code>repeated .pactus.PeerInfo connected_peers = 5 [json_name = "connectedPeers"];</code>
      */
     int getConnectedPeers5Count();
     /**
+     * <pre>
+     * List of connected peers.
+     * </pre>
+     *
      * <code>repeated .pactus.PeerInfo connected_peers = 5 [json_name = "connectedPeers"];</code>
      */
     java.util.List<? extends pactus.network.NetworkOuterClass.PeerInfoOrBuilder> 
         getConnectedPeers5OrBuilderList();
     /**
+     * <pre>
+     * List of connected peers.
+     * </pre>
+     *
      * <code>repeated .pactus.PeerInfo connected_peers = 5 [json_name = "connectedPeers"];</code>
      */
     pactus.network.NetworkOuterClass.PeerInfoOrBuilder getConnectedPeers5OrBuilder(
         int index);
 
     /**
+     * <pre>
+     * Bytes sent per peer ID.
+     * </pre>
+     *
      * <code>map&lt;uint32, uint64&gt; sent_bytes = 6 [json_name = "sentBytes"];</code>
      */
     int getSentBytesCount();
     /**
+     * <pre>
+     * Bytes sent per peer ID.
+     * </pre>
+     *
      * <code>map&lt;uint32, uint64&gt; sent_bytes = 6 [json_name = "sentBytes"];</code>
      */
     boolean containsSentBytes(
@@ -488,11 +544,19 @@ public final class NetworkOuterClass {
     java.util.Map<java.lang.Integer, java.lang.Long>
     getSentBytes();
     /**
+     * <pre>
+     * Bytes sent per peer ID.
+     * </pre>
+     *
      * <code>map&lt;uint32, uint64&gt; sent_bytes = 6 [json_name = "sentBytes"];</code>
      */
     java.util.Map<java.lang.Integer, java.lang.Long>
     getSentBytesMap();
     /**
+     * <pre>
+     * Bytes sent per peer ID.
+     * </pre>
+     *
      * <code>map&lt;uint32, uint64&gt; sent_bytes = 6 [json_name = "sentBytes"];</code>
      */
 
@@ -500,6 +564,10 @@ public final class NetworkOuterClass {
         int key,
         long defaultValue);
     /**
+     * <pre>
+     * Bytes sent per peer ID.
+     * </pre>
+     *
      * <code>map&lt;uint32, uint64&gt; sent_bytes = 6 [json_name = "sentBytes"];</code>
      */
 
@@ -507,10 +575,18 @@ public final class NetworkOuterClass {
         int key);
 
     /**
+     * <pre>
+     * Bytes received per peer ID.
+     * </pre>
+     *
      * <code>map&lt;uint32, uint64&gt; received_bytes = 7 [json_name = "receivedBytes"];</code>
      */
     int getReceivedBytesCount();
     /**
+     * <pre>
+     * Bytes received per peer ID.
+     * </pre>
+     *
      * <code>map&lt;uint32, uint64&gt; received_bytes = 7 [json_name = "receivedBytes"];</code>
      */
     boolean containsReceivedBytes(
@@ -522,11 +598,19 @@ public final class NetworkOuterClass {
     java.util.Map<java.lang.Integer, java.lang.Long>
     getReceivedBytes();
     /**
+     * <pre>
+     * Bytes received per peer ID.
+     * </pre>
+     *
      * <code>map&lt;uint32, uint64&gt; received_bytes = 7 [json_name = "receivedBytes"];</code>
      */
     java.util.Map<java.lang.Integer, java.lang.Long>
     getReceivedBytesMap();
     /**
+     * <pre>
+     * Bytes received per peer ID.
+     * </pre>
+     *
      * <code>map&lt;uint32, uint64&gt; received_bytes = 7 [json_name = "receivedBytes"];</code>
      */
 
@@ -534,6 +618,10 @@ public final class NetworkOuterClass {
         int key,
         long defaultValue);
     /**
+     * <pre>
+     * Bytes received per peer ID.
+     * </pre>
+     *
      * <code>map&lt;uint32, uint64&gt; received_bytes = 7 [json_name = "receivedBytes"];</code>
      */
 
@@ -541,6 +629,10 @@ public final class NetworkOuterClass {
         int key);
   }
   /**
+   * <pre>
+   * Response message containing information about the overall network.
+   * </pre>
+   *
    * Protobuf type {@code pactus.GetNetworkInfoResponse}
    */
   public static final class GetNetworkInfoResponse extends
@@ -599,6 +691,10 @@ public final class NetworkOuterClass {
     public static final int NETWORK_NAME_FIELD_NUMBER = 1;
     private volatile java.lang.Object networkName_;
     /**
+     * <pre>
+     * Name of the network.
+     * </pre>
+     *
      * <code>string network_name = 1 [json_name = "networkName"];</code>
      * @return The networkName.
      */
@@ -616,6 +712,10 @@ public final class NetworkOuterClass {
       }
     }
     /**
+     * <pre>
+     * Name of the network.
+     * </pre>
+     *
      * <code>string network_name = 1 [json_name = "networkName"];</code>
      * @return The bytes for networkName.
      */
@@ -637,6 +737,10 @@ public final class NetworkOuterClass {
     public static final int TOTAL_SENT_BYTES_FIELD_NUMBER = 2;
     private int totalSentBytes_;
     /**
+     * <pre>
+     * Total bytes sent across the network.
+     * </pre>
+     *
      * <code>uint32 total_sent_bytes = 2 [json_name = "totalSentBytes"];</code>
      * @return The totalSentBytes.
      */
@@ -648,6 +752,10 @@ public final class NetworkOuterClass {
     public static final int TOTAL_RECEIVED_BYTES_FIELD_NUMBER = 3;
     private int totalReceivedBytes_;
     /**
+     * <pre>
+     * Total bytes received across the network.
+     * </pre>
+     *
      * <code>uint32 total_received_bytes = 3 [json_name = "totalReceivedBytes"];</code>
      * @return The totalReceivedBytes.
      */
@@ -661,6 +769,10 @@ public final class NetworkOuterClass {
     // An alternative name is used for field "connected_peers_count" because:
     //     both repeated field "connected_peers" and singular field "connected_peers_count" generate the method "getConnectedPeersCount()"
     /**
+     * <pre>
+     * Number of connected peers.
+     * </pre>
+     *
      * <code>uint32 connected_peers_count = 4 [json_name = "connectedPeersCount"];</code>
      * @return The connectedPeersCount.
      */
@@ -674,6 +786,10 @@ public final class NetworkOuterClass {
     // An alternative name is used for field "connected_peers" because:
     //     both repeated field "connected_peers" and singular field "connected_peers_count" generate the method "getConnectedPeersCount()"
     /**
+     * <pre>
+     * List of connected peers.
+     * </pre>
+     *
      * <code>repeated .pactus.PeerInfo connected_peers = 5 [json_name = "connectedPeers"];</code>
      */
     @java.lang.Override
@@ -681,6 +797,10 @@ public final class NetworkOuterClass {
       return connectedPeers5_;
     }
     /**
+     * <pre>
+     * List of connected peers.
+     * </pre>
+     *
      * <code>repeated .pactus.PeerInfo connected_peers = 5 [json_name = "connectedPeers"];</code>
      */
     @java.lang.Override
@@ -689,6 +809,10 @@ public final class NetworkOuterClass {
       return connectedPeers5_;
     }
     /**
+     * <pre>
+     * List of connected peers.
+     * </pre>
+     *
      * <code>repeated .pactus.PeerInfo connected_peers = 5 [json_name = "connectedPeers"];</code>
      */
     @java.lang.Override
@@ -696,6 +820,10 @@ public final class NetworkOuterClass {
       return connectedPeers5_.size();
     }
     /**
+     * <pre>
+     * List of connected peers.
+     * </pre>
+     *
      * <code>repeated .pactus.PeerInfo connected_peers = 5 [json_name = "connectedPeers"];</code>
      */
     @java.lang.Override
@@ -703,6 +831,10 @@ public final class NetworkOuterClass {
       return connectedPeers5_.get(index);
     }
     /**
+     * <pre>
+     * List of connected peers.
+     * </pre>
+     *
      * <code>repeated .pactus.PeerInfo connected_peers = 5 [json_name = "connectedPeers"];</code>
      */
     @java.lang.Override
@@ -738,6 +870,10 @@ public final class NetworkOuterClass {
       return internalGetSentBytes().getMap().size();
     }
     /**
+     * <pre>
+     * Bytes sent per peer ID.
+     * </pre>
+     *
      * <code>map&lt;uint32, uint64&gt; sent_bytes = 6 [json_name = "sentBytes"];</code>
      */
 
@@ -756,6 +892,10 @@ public final class NetworkOuterClass {
       return getSentBytesMap();
     }
     /**
+     * <pre>
+     * Bytes sent per peer ID.
+     * </pre>
+     *
      * <code>map&lt;uint32, uint64&gt; sent_bytes = 6 [json_name = "sentBytes"];</code>
      */
     @java.lang.Override
@@ -764,6 +904,10 @@ public final class NetworkOuterClass {
       return internalGetSentBytes().getMap();
     }
     /**
+     * <pre>
+     * Bytes sent per peer ID.
+     * </pre>
+     *
      * <code>map&lt;uint32, uint64&gt; sent_bytes = 6 [json_name = "sentBytes"];</code>
      */
     @java.lang.Override
@@ -777,6 +921,10 @@ public final class NetworkOuterClass {
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
+     * <pre>
+     * Bytes sent per peer ID.
+     * </pre>
+     *
      * <code>map&lt;uint32, uint64&gt; sent_bytes = 6 [json_name = "sentBytes"];</code>
      */
     @java.lang.Override
@@ -819,6 +967,10 @@ public final class NetworkOuterClass {
       return internalGetReceivedBytes().getMap().size();
     }
     /**
+     * <pre>
+     * Bytes received per peer ID.
+     * </pre>
+     *
      * <code>map&lt;uint32, uint64&gt; received_bytes = 7 [json_name = "receivedBytes"];</code>
      */
 
@@ -837,6 +989,10 @@ public final class NetworkOuterClass {
       return getReceivedBytesMap();
     }
     /**
+     * <pre>
+     * Bytes received per peer ID.
+     * </pre>
+     *
      * <code>map&lt;uint32, uint64&gt; received_bytes = 7 [json_name = "receivedBytes"];</code>
      */
     @java.lang.Override
@@ -845,6 +1001,10 @@ public final class NetworkOuterClass {
       return internalGetReceivedBytes().getMap();
     }
     /**
+     * <pre>
+     * Bytes received per peer ID.
+     * </pre>
+     *
      * <code>map&lt;uint32, uint64&gt; received_bytes = 7 [json_name = "receivedBytes"];</code>
      */
     @java.lang.Override
@@ -858,6 +1018,10 @@ public final class NetworkOuterClass {
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
+     * <pre>
+     * Bytes received per peer ID.
+     * </pre>
+     *
      * <code>map&lt;uint32, uint64&gt; received_bytes = 7 [json_name = "receivedBytes"];</code>
      */
     @java.lang.Override
@@ -1118,6 +1282,10 @@ public final class NetworkOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Response message containing information about the overall network.
+     * </pre>
+     *
      * Protobuf type {@code pactus.GetNetworkInfoResponse}
      */
     public static final class Builder extends
@@ -1422,6 +1590,10 @@ public final class NetworkOuterClass {
 
       private java.lang.Object networkName_ = "";
       /**
+       * <pre>
+       * Name of the network.
+       * </pre>
+       *
        * <code>string network_name = 1 [json_name = "networkName"];</code>
        * @return The networkName.
        */
@@ -1438,6 +1610,10 @@ public final class NetworkOuterClass {
         }
       }
       /**
+       * <pre>
+       * Name of the network.
+       * </pre>
+       *
        * <code>string network_name = 1 [json_name = "networkName"];</code>
        * @return The bytes for networkName.
        */
@@ -1455,6 +1631,10 @@ public final class NetworkOuterClass {
         }
       }
       /**
+       * <pre>
+       * Name of the network.
+       * </pre>
+       *
        * <code>string network_name = 1 [json_name = "networkName"];</code>
        * @param value The networkName to set.
        * @return This builder for chaining.
@@ -1470,6 +1650,10 @@ public final class NetworkOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of the network.
+       * </pre>
+       *
        * <code>string network_name = 1 [json_name = "networkName"];</code>
        * @return This builder for chaining.
        */
@@ -1480,6 +1664,10 @@ public final class NetworkOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of the network.
+       * </pre>
+       *
        * <code>string network_name = 1 [json_name = "networkName"];</code>
        * @param value The bytes for networkName to set.
        * @return This builder for chaining.
@@ -1498,6 +1686,10 @@ public final class NetworkOuterClass {
 
       private int totalSentBytes_ ;
       /**
+       * <pre>
+       * Total bytes sent across the network.
+       * </pre>
+       *
        * <code>uint32 total_sent_bytes = 2 [json_name = "totalSentBytes"];</code>
        * @return The totalSentBytes.
        */
@@ -1506,6 +1698,10 @@ public final class NetworkOuterClass {
         return totalSentBytes_;
       }
       /**
+       * <pre>
+       * Total bytes sent across the network.
+       * </pre>
+       *
        * <code>uint32 total_sent_bytes = 2 [json_name = "totalSentBytes"];</code>
        * @param value The totalSentBytes to set.
        * @return This builder for chaining.
@@ -1517,6 +1713,10 @@ public final class NetworkOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Total bytes sent across the network.
+       * </pre>
+       *
        * <code>uint32 total_sent_bytes = 2 [json_name = "totalSentBytes"];</code>
        * @return This builder for chaining.
        */
@@ -1529,6 +1729,10 @@ public final class NetworkOuterClass {
 
       private int totalReceivedBytes_ ;
       /**
+       * <pre>
+       * Total bytes received across the network.
+       * </pre>
+       *
        * <code>uint32 total_received_bytes = 3 [json_name = "totalReceivedBytes"];</code>
        * @return The totalReceivedBytes.
        */
@@ -1537,6 +1741,10 @@ public final class NetworkOuterClass {
         return totalReceivedBytes_;
       }
       /**
+       * <pre>
+       * Total bytes received across the network.
+       * </pre>
+       *
        * <code>uint32 total_received_bytes = 3 [json_name = "totalReceivedBytes"];</code>
        * @param value The totalReceivedBytes to set.
        * @return This builder for chaining.
@@ -1548,6 +1756,10 @@ public final class NetworkOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Total bytes received across the network.
+       * </pre>
+       *
        * <code>uint32 total_received_bytes = 3 [json_name = "totalReceivedBytes"];</code>
        * @return This builder for chaining.
        */
@@ -1560,6 +1772,10 @@ public final class NetworkOuterClass {
 
       private int connectedPeersCount4_ ;
       /**
+       * <pre>
+       * Number of connected peers.
+       * </pre>
+       *
        * <code>uint32 connected_peers_count = 4 [json_name = "connectedPeersCount"];</code>
        * @return The connectedPeersCount.
        */
@@ -1568,6 +1784,10 @@ public final class NetworkOuterClass {
         return connectedPeersCount4_;
       }
       /**
+       * <pre>
+       * Number of connected peers.
+       * </pre>
+       *
        * <code>uint32 connected_peers_count = 4 [json_name = "connectedPeersCount"];</code>
        * @param value The connectedPeersCount to set.
        * @return This builder for chaining.
@@ -1579,6 +1799,10 @@ public final class NetworkOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Number of connected peers.
+       * </pre>
+       *
        * <code>uint32 connected_peers_count = 4 [json_name = "connectedPeersCount"];</code>
        * @return This builder for chaining.
        */
@@ -1602,6 +1826,10 @@ public final class NetworkOuterClass {
           pactus.network.NetworkOuterClass.PeerInfo, pactus.network.NetworkOuterClass.PeerInfo.Builder, pactus.network.NetworkOuterClass.PeerInfoOrBuilder> connectedPeers5Builder_;
 
       /**
+       * <pre>
+       * List of connected peers.
+       * </pre>
+       *
        * <code>repeated .pactus.PeerInfo connected_peers = 5 [json_name = "connectedPeers"];</code>
        */
       public java.util.List<pactus.network.NetworkOuterClass.PeerInfo> getConnectedPeers5List() {
@@ -1612,6 +1840,10 @@ public final class NetworkOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of connected peers.
+       * </pre>
+       *
        * <code>repeated .pactus.PeerInfo connected_peers = 5 [json_name = "connectedPeers"];</code>
        */
       public int getConnectedPeers5Count() {
@@ -1622,6 +1854,10 @@ public final class NetworkOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of connected peers.
+       * </pre>
+       *
        * <code>repeated .pactus.PeerInfo connected_peers = 5 [json_name = "connectedPeers"];</code>
        */
       public pactus.network.NetworkOuterClass.PeerInfo getConnectedPeers5(int index) {
@@ -1632,6 +1868,10 @@ public final class NetworkOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of connected peers.
+       * </pre>
+       *
        * <code>repeated .pactus.PeerInfo connected_peers = 5 [json_name = "connectedPeers"];</code>
        */
       public Builder setConnectedPeers5(
@@ -1649,6 +1889,10 @@ public final class NetworkOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of connected peers.
+       * </pre>
+       *
        * <code>repeated .pactus.PeerInfo connected_peers = 5 [json_name = "connectedPeers"];</code>
        */
       public Builder setConnectedPeers5(
@@ -1663,6 +1907,10 @@ public final class NetworkOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of connected peers.
+       * </pre>
+       *
        * <code>repeated .pactus.PeerInfo connected_peers = 5 [json_name = "connectedPeers"];</code>
        */
       public Builder addConnectedPeers5(pactus.network.NetworkOuterClass.PeerInfo value) {
@@ -1679,6 +1927,10 @@ public final class NetworkOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of connected peers.
+       * </pre>
+       *
        * <code>repeated .pactus.PeerInfo connected_peers = 5 [json_name = "connectedPeers"];</code>
        */
       public Builder addConnectedPeers5(
@@ -1696,6 +1948,10 @@ public final class NetworkOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of connected peers.
+       * </pre>
+       *
        * <code>repeated .pactus.PeerInfo connected_peers = 5 [json_name = "connectedPeers"];</code>
        */
       public Builder addConnectedPeers5(
@@ -1710,6 +1966,10 @@ public final class NetworkOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of connected peers.
+       * </pre>
+       *
        * <code>repeated .pactus.PeerInfo connected_peers = 5 [json_name = "connectedPeers"];</code>
        */
       public Builder addConnectedPeers5(
@@ -1724,6 +1984,10 @@ public final class NetworkOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of connected peers.
+       * </pre>
+       *
        * <code>repeated .pactus.PeerInfo connected_peers = 5 [json_name = "connectedPeers"];</code>
        */
       public Builder addAllConnectedPeers5(
@@ -1739,6 +2003,10 @@ public final class NetworkOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of connected peers.
+       * </pre>
+       *
        * <code>repeated .pactus.PeerInfo connected_peers = 5 [json_name = "connectedPeers"];</code>
        */
       public Builder clearConnectedPeers5() {
@@ -1752,6 +2020,10 @@ public final class NetworkOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of connected peers.
+       * </pre>
+       *
        * <code>repeated .pactus.PeerInfo connected_peers = 5 [json_name = "connectedPeers"];</code>
        */
       public Builder removeConnectedPeers5(int index) {
@@ -1765,6 +2037,10 @@ public final class NetworkOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of connected peers.
+       * </pre>
+       *
        * <code>repeated .pactus.PeerInfo connected_peers = 5 [json_name = "connectedPeers"];</code>
        */
       public pactus.network.NetworkOuterClass.PeerInfo.Builder getConnectedPeers5Builder(
@@ -1772,6 +2048,10 @@ public final class NetworkOuterClass {
         return getConnectedPeers5FieldBuilder().getBuilder(index);
       }
       /**
+       * <pre>
+       * List of connected peers.
+       * </pre>
+       *
        * <code>repeated .pactus.PeerInfo connected_peers = 5 [json_name = "connectedPeers"];</code>
        */
       public pactus.network.NetworkOuterClass.PeerInfoOrBuilder getConnectedPeers5OrBuilder(
@@ -1782,6 +2062,10 @@ public final class NetworkOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of connected peers.
+       * </pre>
+       *
        * <code>repeated .pactus.PeerInfo connected_peers = 5 [json_name = "connectedPeers"];</code>
        */
       public java.util.List<? extends pactus.network.NetworkOuterClass.PeerInfoOrBuilder> 
@@ -1793,6 +2077,10 @@ public final class NetworkOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of connected peers.
+       * </pre>
+       *
        * <code>repeated .pactus.PeerInfo connected_peers = 5 [json_name = "connectedPeers"];</code>
        */
       public pactus.network.NetworkOuterClass.PeerInfo.Builder addConnectedPeers5Builder() {
@@ -1800,6 +2088,10 @@ public final class NetworkOuterClass {
             pactus.network.NetworkOuterClass.PeerInfo.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of connected peers.
+       * </pre>
+       *
        * <code>repeated .pactus.PeerInfo connected_peers = 5 [json_name = "connectedPeers"];</code>
        */
       public pactus.network.NetworkOuterClass.PeerInfo.Builder addConnectedPeers5Builder(
@@ -1808,6 +2100,10 @@ public final class NetworkOuterClass {
             index, pactus.network.NetworkOuterClass.PeerInfo.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of connected peers.
+       * </pre>
+       *
        * <code>repeated .pactus.PeerInfo connected_peers = 5 [json_name = "connectedPeers"];</code>
        */
       public java.util.List<pactus.network.NetworkOuterClass.PeerInfo.Builder> 
@@ -1856,6 +2152,10 @@ public final class NetworkOuterClass {
         return internalGetSentBytes().getMap().size();
       }
       /**
+       * <pre>
+       * Bytes sent per peer ID.
+       * </pre>
+       *
        * <code>map&lt;uint32, uint64&gt; sent_bytes = 6 [json_name = "sentBytes"];</code>
        */
 
@@ -1874,6 +2174,10 @@ public final class NetworkOuterClass {
         return getSentBytesMap();
       }
       /**
+       * <pre>
+       * Bytes sent per peer ID.
+       * </pre>
+       *
        * <code>map&lt;uint32, uint64&gt; sent_bytes = 6 [json_name = "sentBytes"];</code>
        */
       @java.lang.Override
@@ -1882,6 +2186,10 @@ public final class NetworkOuterClass {
         return internalGetSentBytes().getMap();
       }
       /**
+       * <pre>
+       * Bytes sent per peer ID.
+       * </pre>
+       *
        * <code>map&lt;uint32, uint64&gt; sent_bytes = 6 [json_name = "sentBytes"];</code>
        */
       @java.lang.Override
@@ -1895,6 +2203,10 @@ public final class NetworkOuterClass {
         return map.containsKey(key) ? map.get(key) : defaultValue;
       }
       /**
+       * <pre>
+       * Bytes sent per peer ID.
+       * </pre>
+       *
        * <code>map&lt;uint32, uint64&gt; sent_bytes = 6 [json_name = "sentBytes"];</code>
        */
       @java.lang.Override
@@ -1916,6 +2228,10 @@ public final class NetworkOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Bytes sent per peer ID.
+       * </pre>
+       *
        * <code>map&lt;uint32, uint64&gt; sent_bytes = 6 [json_name = "sentBytes"];</code>
        */
 
@@ -1935,6 +2251,10 @@ public final class NetworkOuterClass {
         return internalGetMutableSentBytes().getMutableMap();
       }
       /**
+       * <pre>
+       * Bytes sent per peer ID.
+       * </pre>
+       *
        * <code>map&lt;uint32, uint64&gt; sent_bytes = 6 [json_name = "sentBytes"];</code>
        */
       public Builder putSentBytes(
@@ -1947,6 +2267,10 @@ public final class NetworkOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Bytes sent per peer ID.
+       * </pre>
+       *
        * <code>map&lt;uint32, uint64&gt; sent_bytes = 6 [json_name = "sentBytes"];</code>
        */
 
@@ -1984,6 +2308,10 @@ public final class NetworkOuterClass {
         return internalGetReceivedBytes().getMap().size();
       }
       /**
+       * <pre>
+       * Bytes received per peer ID.
+       * </pre>
+       *
        * <code>map&lt;uint32, uint64&gt; received_bytes = 7 [json_name = "receivedBytes"];</code>
        */
 
@@ -2002,6 +2330,10 @@ public final class NetworkOuterClass {
         return getReceivedBytesMap();
       }
       /**
+       * <pre>
+       * Bytes received per peer ID.
+       * </pre>
+       *
        * <code>map&lt;uint32, uint64&gt; received_bytes = 7 [json_name = "receivedBytes"];</code>
        */
       @java.lang.Override
@@ -2010,6 +2342,10 @@ public final class NetworkOuterClass {
         return internalGetReceivedBytes().getMap();
       }
       /**
+       * <pre>
+       * Bytes received per peer ID.
+       * </pre>
+       *
        * <code>map&lt;uint32, uint64&gt; received_bytes = 7 [json_name = "receivedBytes"];</code>
        */
       @java.lang.Override
@@ -2023,6 +2359,10 @@ public final class NetworkOuterClass {
         return map.containsKey(key) ? map.get(key) : defaultValue;
       }
       /**
+       * <pre>
+       * Bytes received per peer ID.
+       * </pre>
+       *
        * <code>map&lt;uint32, uint64&gt; received_bytes = 7 [json_name = "receivedBytes"];</code>
        */
       @java.lang.Override
@@ -2044,6 +2384,10 @@ public final class NetworkOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Bytes received per peer ID.
+       * </pre>
+       *
        * <code>map&lt;uint32, uint64&gt; received_bytes = 7 [json_name = "receivedBytes"];</code>
        */
 
@@ -2063,6 +2407,10 @@ public final class NetworkOuterClass {
         return internalGetMutableReceivedBytes().getMutableMap();
       }
       /**
+       * <pre>
+       * Bytes received per peer ID.
+       * </pre>
+       *
        * <code>map&lt;uint32, uint64&gt; received_bytes = 7 [json_name = "receivedBytes"];</code>
        */
       public Builder putReceivedBytes(
@@ -2075,6 +2423,10 @@ public final class NetworkOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Bytes received per peer ID.
+       * </pre>
+       *
        * <code>map&lt;uint32, uint64&gt; received_bytes = 7 [json_name = "receivedBytes"];</code>
        */
 
@@ -2153,6 +2505,11 @@ public final class NetworkOuterClass {
       com.google.protobuf.MessageOrBuilder {
   }
   /**
+   * <pre>
+   * Request message for retrieving information about a specific node in the
+   * network.
+   * </pre>
+   *
    * Protobuf type {@code pactus.GetNodeInfoRequest}
    */
   public static final class GetNodeInfoRequest extends
@@ -2337,6 +2694,11 @@ public final class NetworkOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Request message for retrieving information about a specific node in the
+     * network.
+     * </pre>
+     *
      * Protobuf type {@code pactus.GetNodeInfoRequest}
      */
     public static final class Builder extends
@@ -2553,11 +2915,19 @@ public final class NetworkOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Moniker of the node.
+     * </pre>
+     *
      * <code>string moniker = 1 [json_name = "moniker"];</code>
      * @return The moniker.
      */
     java.lang.String getMoniker();
     /**
+     * <pre>
+     * Moniker of the node.
+     * </pre>
+     *
      * <code>string moniker = 1 [json_name = "moniker"];</code>
      * @return The bytes for moniker.
      */
@@ -2565,11 +2935,19 @@ public final class NetworkOuterClass {
         getMonikerBytes();
 
     /**
+     * <pre>
+     * Agent information of the node.
+     * </pre>
+     *
      * <code>string agent = 2 [json_name = "agent"];</code>
      * @return The agent.
      */
     java.lang.String getAgent();
     /**
+     * <pre>
+     * Agent information of the node.
+     * </pre>
+     *
      * <code>string agent = 2 [json_name = "agent"];</code>
      * @return The bytes for agent.
      */
@@ -2577,23 +2955,39 @@ public final class NetworkOuterClass {
         getAgentBytes();
 
     /**
+     * <pre>
+     * Peer ID of the node.
+     * </pre>
+     *
      * <code>bytes peer_id = 3 [json_name = "peerId"];</code>
      * @return The peerId.
      */
     com.google.protobuf.ByteString getPeerId();
 
     /**
+     * <pre>
+     * Timestamp when the node started.
+     * </pre>
+     *
      * <code>uint64 started_at = 4 [json_name = "startedAt"];</code>
      * @return The startedAt.
      */
     long getStartedAt();
 
     /**
+     * <pre>
+     * Reachability status of the node.
+     * </pre>
+     *
      * <code>string reachability = 5 [json_name = "reachability"];</code>
      * @return The reachability.
      */
     java.lang.String getReachability();
     /**
+     * <pre>
+     * Reachability status of the node.
+     * </pre>
+     *
      * <code>string reachability = 5 [json_name = "reachability"];</code>
      * @return The bytes for reachability.
      */
@@ -2601,16 +2995,28 @@ public final class NetworkOuterClass {
         getReachabilityBytes();
 
     /**
+     * <pre>
+     * List of services provided by the node.
+     * </pre>
+     *
      * <code>repeated int32 services = 6 [json_name = "services"];</code>
      * @return A list containing the services.
      */
     java.util.List<java.lang.Integer> getServicesList();
     /**
+     * <pre>
+     * List of services provided by the node.
+     * </pre>
+     *
      * <code>repeated int32 services = 6 [json_name = "services"];</code>
      * @return The count of services.
      */
     int getServicesCount();
     /**
+     * <pre>
+     * List of services provided by the node.
+     * </pre>
+     *
      * <code>repeated int32 services = 6 [json_name = "services"];</code>
      * @param index The index of the element to return.
      * @return The services at the given index.
@@ -2618,23 +3024,39 @@ public final class NetworkOuterClass {
     int getServices(int index);
 
     /**
+     * <pre>
+     * Names of services provided by the node.
+     * </pre>
+     *
      * <code>repeated string services_names = 7 [json_name = "servicesNames"];</code>
      * @return A list containing the servicesNames.
      */
     java.util.List<java.lang.String>
         getServicesNamesList();
     /**
+     * <pre>
+     * Names of services provided by the node.
+     * </pre>
+     *
      * <code>repeated string services_names = 7 [json_name = "servicesNames"];</code>
      * @return The count of servicesNames.
      */
     int getServicesNamesCount();
     /**
+     * <pre>
+     * Names of services provided by the node.
+     * </pre>
+     *
      * <code>repeated string services_names = 7 [json_name = "servicesNames"];</code>
      * @param index The index of the element to return.
      * @return The servicesNames at the given index.
      */
     java.lang.String getServicesNames(int index);
     /**
+     * <pre>
+     * Names of services provided by the node.
+     * </pre>
+     *
      * <code>repeated string services_names = 7 [json_name = "servicesNames"];</code>
      * @param index The index of the value to return.
      * @return The bytes of the servicesNames at the given index.
@@ -2643,23 +3065,39 @@ public final class NetworkOuterClass {
         getServicesNamesBytes(int index);
 
     /**
+     * <pre>
+     * List of addresses associated with the node.
+     * </pre>
+     *
      * <code>repeated string addrs = 8 [json_name = "addrs"];</code>
      * @return A list containing the addrs.
      */
     java.util.List<java.lang.String>
         getAddrsList();
     /**
+     * <pre>
+     * List of addresses associated with the node.
+     * </pre>
+     *
      * <code>repeated string addrs = 8 [json_name = "addrs"];</code>
      * @return The count of addrs.
      */
     int getAddrsCount();
     /**
+     * <pre>
+     * List of addresses associated with the node.
+     * </pre>
+     *
      * <code>repeated string addrs = 8 [json_name = "addrs"];</code>
      * @param index The index of the element to return.
      * @return The addrs at the given index.
      */
     java.lang.String getAddrs(int index);
     /**
+     * <pre>
+     * List of addresses associated with the node.
+     * </pre>
+     *
      * <code>repeated string addrs = 8 [json_name = "addrs"];</code>
      * @param index The index of the value to return.
      * @return The bytes of the addrs at the given index.
@@ -2668,23 +3106,39 @@ public final class NetworkOuterClass {
         getAddrsBytes(int index);
 
     /**
+     * <pre>
+     * List of protocols supported by the node.
+     * </pre>
+     *
      * <code>repeated string protocols = 9 [json_name = "protocols"];</code>
      * @return A list containing the protocols.
      */
     java.util.List<java.lang.String>
         getProtocolsList();
     /**
+     * <pre>
+     * List of protocols supported by the node.
+     * </pre>
+     *
      * <code>repeated string protocols = 9 [json_name = "protocols"];</code>
      * @return The count of protocols.
      */
     int getProtocolsCount();
     /**
+     * <pre>
+     * List of protocols supported by the node.
+     * </pre>
+     *
      * <code>repeated string protocols = 9 [json_name = "protocols"];</code>
      * @param index The index of the element to return.
      * @return The protocols at the given index.
      */
     java.lang.String getProtocols(int index);
     /**
+     * <pre>
+     * List of protocols supported by the node.
+     * </pre>
+     *
      * <code>repeated string protocols = 9 [json_name = "protocols"];</code>
      * @param index The index of the value to return.
      * @return The bytes of the protocols at the given index.
@@ -2693,6 +3147,10 @@ public final class NetworkOuterClass {
         getProtocolsBytes(int index);
   }
   /**
+   * <pre>
+   * Response message containing information about a specific node in the network.
+   * </pre>
+   *
    * Protobuf type {@code pactus.GetNodeInfoResponse}
    */
   public static final class GetNodeInfoResponse extends
@@ -2743,6 +3201,10 @@ public final class NetworkOuterClass {
     public static final int MONIKER_FIELD_NUMBER = 1;
     private volatile java.lang.Object moniker_;
     /**
+     * <pre>
+     * Moniker of the node.
+     * </pre>
+     *
      * <code>string moniker = 1 [json_name = "moniker"];</code>
      * @return The moniker.
      */
@@ -2760,6 +3222,10 @@ public final class NetworkOuterClass {
       }
     }
     /**
+     * <pre>
+     * Moniker of the node.
+     * </pre>
+     *
      * <code>string moniker = 1 [json_name = "moniker"];</code>
      * @return The bytes for moniker.
      */
@@ -2781,6 +3247,10 @@ public final class NetworkOuterClass {
     public static final int AGENT_FIELD_NUMBER = 2;
     private volatile java.lang.Object agent_;
     /**
+     * <pre>
+     * Agent information of the node.
+     * </pre>
+     *
      * <code>string agent = 2 [json_name = "agent"];</code>
      * @return The agent.
      */
@@ -2798,6 +3268,10 @@ public final class NetworkOuterClass {
       }
     }
     /**
+     * <pre>
+     * Agent information of the node.
+     * </pre>
+     *
      * <code>string agent = 2 [json_name = "agent"];</code>
      * @return The bytes for agent.
      */
@@ -2819,6 +3293,10 @@ public final class NetworkOuterClass {
     public static final int PEER_ID_FIELD_NUMBER = 3;
     private com.google.protobuf.ByteString peerId_;
     /**
+     * <pre>
+     * Peer ID of the node.
+     * </pre>
+     *
      * <code>bytes peer_id = 3 [json_name = "peerId"];</code>
      * @return The peerId.
      */
@@ -2830,6 +3308,10 @@ public final class NetworkOuterClass {
     public static final int STARTED_AT_FIELD_NUMBER = 4;
     private long startedAt_;
     /**
+     * <pre>
+     * Timestamp when the node started.
+     * </pre>
+     *
      * <code>uint64 started_at = 4 [json_name = "startedAt"];</code>
      * @return The startedAt.
      */
@@ -2841,6 +3323,10 @@ public final class NetworkOuterClass {
     public static final int REACHABILITY_FIELD_NUMBER = 5;
     private volatile java.lang.Object reachability_;
     /**
+     * <pre>
+     * Reachability status of the node.
+     * </pre>
+     *
      * <code>string reachability = 5 [json_name = "reachability"];</code>
      * @return The reachability.
      */
@@ -2858,6 +3344,10 @@ public final class NetworkOuterClass {
       }
     }
     /**
+     * <pre>
+     * Reachability status of the node.
+     * </pre>
+     *
      * <code>string reachability = 5 [json_name = "reachability"];</code>
      * @return The bytes for reachability.
      */
@@ -2879,6 +3369,10 @@ public final class NetworkOuterClass {
     public static final int SERVICES_FIELD_NUMBER = 6;
     private com.google.protobuf.Internal.IntList services_;
     /**
+     * <pre>
+     * List of services provided by the node.
+     * </pre>
+     *
      * <code>repeated int32 services = 6 [json_name = "services"];</code>
      * @return A list containing the services.
      */
@@ -2888,6 +3382,10 @@ public final class NetworkOuterClass {
       return services_;
     }
     /**
+     * <pre>
+     * List of services provided by the node.
+     * </pre>
+     *
      * <code>repeated int32 services = 6 [json_name = "services"];</code>
      * @return The count of services.
      */
@@ -2895,6 +3393,10 @@ public final class NetworkOuterClass {
       return services_.size();
     }
     /**
+     * <pre>
+     * List of services provided by the node.
+     * </pre>
+     *
      * <code>repeated int32 services = 6 [json_name = "services"];</code>
      * @param index The index of the element to return.
      * @return The services at the given index.
@@ -2907,6 +3409,10 @@ public final class NetworkOuterClass {
     public static final int SERVICES_NAMES_FIELD_NUMBER = 7;
     private com.google.protobuf.LazyStringList servicesNames_;
     /**
+     * <pre>
+     * Names of services provided by the node.
+     * </pre>
+     *
      * <code>repeated string services_names = 7 [json_name = "servicesNames"];</code>
      * @return A list containing the servicesNames.
      */
@@ -2915,6 +3421,10 @@ public final class NetworkOuterClass {
       return servicesNames_;
     }
     /**
+     * <pre>
+     * Names of services provided by the node.
+     * </pre>
+     *
      * <code>repeated string services_names = 7 [json_name = "servicesNames"];</code>
      * @return The count of servicesNames.
      */
@@ -2922,6 +3432,10 @@ public final class NetworkOuterClass {
       return servicesNames_.size();
     }
     /**
+     * <pre>
+     * Names of services provided by the node.
+     * </pre>
+     *
      * <code>repeated string services_names = 7 [json_name = "servicesNames"];</code>
      * @param index The index of the element to return.
      * @return The servicesNames at the given index.
@@ -2930,6 +3444,10 @@ public final class NetworkOuterClass {
       return servicesNames_.get(index);
     }
     /**
+     * <pre>
+     * Names of services provided by the node.
+     * </pre>
+     *
      * <code>repeated string services_names = 7 [json_name = "servicesNames"];</code>
      * @param index The index of the value to return.
      * @return The bytes of the servicesNames at the given index.
@@ -2942,6 +3460,10 @@ public final class NetworkOuterClass {
     public static final int ADDRS_FIELD_NUMBER = 8;
     private com.google.protobuf.LazyStringList addrs_;
     /**
+     * <pre>
+     * List of addresses associated with the node.
+     * </pre>
+     *
      * <code>repeated string addrs = 8 [json_name = "addrs"];</code>
      * @return A list containing the addrs.
      */
@@ -2950,6 +3472,10 @@ public final class NetworkOuterClass {
       return addrs_;
     }
     /**
+     * <pre>
+     * List of addresses associated with the node.
+     * </pre>
+     *
      * <code>repeated string addrs = 8 [json_name = "addrs"];</code>
      * @return The count of addrs.
      */
@@ -2957,6 +3483,10 @@ public final class NetworkOuterClass {
       return addrs_.size();
     }
     /**
+     * <pre>
+     * List of addresses associated with the node.
+     * </pre>
+     *
      * <code>repeated string addrs = 8 [json_name = "addrs"];</code>
      * @param index The index of the element to return.
      * @return The addrs at the given index.
@@ -2965,6 +3495,10 @@ public final class NetworkOuterClass {
       return addrs_.get(index);
     }
     /**
+     * <pre>
+     * List of addresses associated with the node.
+     * </pre>
+     *
      * <code>repeated string addrs = 8 [json_name = "addrs"];</code>
      * @param index The index of the value to return.
      * @return The bytes of the addrs at the given index.
@@ -2977,6 +3511,10 @@ public final class NetworkOuterClass {
     public static final int PROTOCOLS_FIELD_NUMBER = 9;
     private com.google.protobuf.LazyStringList protocols_;
     /**
+     * <pre>
+     * List of protocols supported by the node.
+     * </pre>
+     *
      * <code>repeated string protocols = 9 [json_name = "protocols"];</code>
      * @return A list containing the protocols.
      */
@@ -2985,6 +3523,10 @@ public final class NetworkOuterClass {
       return protocols_;
     }
     /**
+     * <pre>
+     * List of protocols supported by the node.
+     * </pre>
+     *
      * <code>repeated string protocols = 9 [json_name = "protocols"];</code>
      * @return The count of protocols.
      */
@@ -2992,6 +3534,10 @@ public final class NetworkOuterClass {
       return protocols_.size();
     }
     /**
+     * <pre>
+     * List of protocols supported by the node.
+     * </pre>
+     *
      * <code>repeated string protocols = 9 [json_name = "protocols"];</code>
      * @param index The index of the element to return.
      * @return The protocols at the given index.
@@ -3000,6 +3546,10 @@ public final class NetworkOuterClass {
       return protocols_.get(index);
     }
     /**
+     * <pre>
+     * List of protocols supported by the node.
+     * </pre>
+     *
      * <code>repeated string protocols = 9 [json_name = "protocols"];</code>
      * @param index The index of the value to return.
      * @return The bytes of the protocols at the given index.
@@ -3286,6 +3836,10 @@ public final class NetworkOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Response message containing information about a specific node in the network.
+     * </pre>
+     *
      * Protobuf type {@code pactus.GetNodeInfoResponse}
      */
     public static final class Builder extends
@@ -3598,6 +4152,10 @@ public final class NetworkOuterClass {
 
       private java.lang.Object moniker_ = "";
       /**
+       * <pre>
+       * Moniker of the node.
+       * </pre>
+       *
        * <code>string moniker = 1 [json_name = "moniker"];</code>
        * @return The moniker.
        */
@@ -3614,6 +4172,10 @@ public final class NetworkOuterClass {
         }
       }
       /**
+       * <pre>
+       * Moniker of the node.
+       * </pre>
+       *
        * <code>string moniker = 1 [json_name = "moniker"];</code>
        * @return The bytes for moniker.
        */
@@ -3631,6 +4193,10 @@ public final class NetworkOuterClass {
         }
       }
       /**
+       * <pre>
+       * Moniker of the node.
+       * </pre>
+       *
        * <code>string moniker = 1 [json_name = "moniker"];</code>
        * @param value The moniker to set.
        * @return This builder for chaining.
@@ -3646,6 +4212,10 @@ public final class NetworkOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Moniker of the node.
+       * </pre>
+       *
        * <code>string moniker = 1 [json_name = "moniker"];</code>
        * @return This builder for chaining.
        */
@@ -3656,6 +4226,10 @@ public final class NetworkOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Moniker of the node.
+       * </pre>
+       *
        * <code>string moniker = 1 [json_name = "moniker"];</code>
        * @param value The bytes for moniker to set.
        * @return This builder for chaining.
@@ -3674,6 +4248,10 @@ public final class NetworkOuterClass {
 
       private java.lang.Object agent_ = "";
       /**
+       * <pre>
+       * Agent information of the node.
+       * </pre>
+       *
        * <code>string agent = 2 [json_name = "agent"];</code>
        * @return The agent.
        */
@@ -3690,6 +4268,10 @@ public final class NetworkOuterClass {
         }
       }
       /**
+       * <pre>
+       * Agent information of the node.
+       * </pre>
+       *
        * <code>string agent = 2 [json_name = "agent"];</code>
        * @return The bytes for agent.
        */
@@ -3707,6 +4289,10 @@ public final class NetworkOuterClass {
         }
       }
       /**
+       * <pre>
+       * Agent information of the node.
+       * </pre>
+       *
        * <code>string agent = 2 [json_name = "agent"];</code>
        * @param value The agent to set.
        * @return This builder for chaining.
@@ -3722,6 +4308,10 @@ public final class NetworkOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Agent information of the node.
+       * </pre>
+       *
        * <code>string agent = 2 [json_name = "agent"];</code>
        * @return This builder for chaining.
        */
@@ -3732,6 +4322,10 @@ public final class NetworkOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Agent information of the node.
+       * </pre>
+       *
        * <code>string agent = 2 [json_name = "agent"];</code>
        * @param value The bytes for agent to set.
        * @return This builder for chaining.
@@ -3750,6 +4344,10 @@ public final class NetworkOuterClass {
 
       private com.google.protobuf.ByteString peerId_ = com.google.protobuf.ByteString.EMPTY;
       /**
+       * <pre>
+       * Peer ID of the node.
+       * </pre>
+       *
        * <code>bytes peer_id = 3 [json_name = "peerId"];</code>
        * @return The peerId.
        */
@@ -3758,6 +4356,10 @@ public final class NetworkOuterClass {
         return peerId_;
       }
       /**
+       * <pre>
+       * Peer ID of the node.
+       * </pre>
+       *
        * <code>bytes peer_id = 3 [json_name = "peerId"];</code>
        * @param value The peerId to set.
        * @return This builder for chaining.
@@ -3772,6 +4374,10 @@ public final class NetworkOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Peer ID of the node.
+       * </pre>
+       *
        * <code>bytes peer_id = 3 [json_name = "peerId"];</code>
        * @return This builder for chaining.
        */
@@ -3784,6 +4390,10 @@ public final class NetworkOuterClass {
 
       private long startedAt_ ;
       /**
+       * <pre>
+       * Timestamp when the node started.
+       * </pre>
+       *
        * <code>uint64 started_at = 4 [json_name = "startedAt"];</code>
        * @return The startedAt.
        */
@@ -3792,6 +4402,10 @@ public final class NetworkOuterClass {
         return startedAt_;
       }
       /**
+       * <pre>
+       * Timestamp when the node started.
+       * </pre>
+       *
        * <code>uint64 started_at = 4 [json_name = "startedAt"];</code>
        * @param value The startedAt to set.
        * @return This builder for chaining.
@@ -3803,6 +4417,10 @@ public final class NetworkOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Timestamp when the node started.
+       * </pre>
+       *
        * <code>uint64 started_at = 4 [json_name = "startedAt"];</code>
        * @return This builder for chaining.
        */
@@ -3815,6 +4433,10 @@ public final class NetworkOuterClass {
 
       private java.lang.Object reachability_ = "";
       /**
+       * <pre>
+       * Reachability status of the node.
+       * </pre>
+       *
        * <code>string reachability = 5 [json_name = "reachability"];</code>
        * @return The reachability.
        */
@@ -3831,6 +4453,10 @@ public final class NetworkOuterClass {
         }
       }
       /**
+       * <pre>
+       * Reachability status of the node.
+       * </pre>
+       *
        * <code>string reachability = 5 [json_name = "reachability"];</code>
        * @return The bytes for reachability.
        */
@@ -3848,6 +4474,10 @@ public final class NetworkOuterClass {
         }
       }
       /**
+       * <pre>
+       * Reachability status of the node.
+       * </pre>
+       *
        * <code>string reachability = 5 [json_name = "reachability"];</code>
        * @param value The reachability to set.
        * @return This builder for chaining.
@@ -3863,6 +4493,10 @@ public final class NetworkOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Reachability status of the node.
+       * </pre>
+       *
        * <code>string reachability = 5 [json_name = "reachability"];</code>
        * @return This builder for chaining.
        */
@@ -3873,6 +4507,10 @@ public final class NetworkOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Reachability status of the node.
+       * </pre>
+       *
        * <code>string reachability = 5 [json_name = "reachability"];</code>
        * @param value The bytes for reachability to set.
        * @return This builder for chaining.
@@ -3897,6 +4535,10 @@ public final class NetworkOuterClass {
          }
       }
       /**
+       * <pre>
+       * List of services provided by the node.
+       * </pre>
+       *
        * <code>repeated int32 services = 6 [json_name = "services"];</code>
        * @return A list containing the services.
        */
@@ -3906,6 +4548,10 @@ public final class NetworkOuterClass {
                  java.util.Collections.unmodifiableList(services_) : services_;
       }
       /**
+       * <pre>
+       * List of services provided by the node.
+       * </pre>
+       *
        * <code>repeated int32 services = 6 [json_name = "services"];</code>
        * @return The count of services.
        */
@@ -3913,6 +4559,10 @@ public final class NetworkOuterClass {
         return services_.size();
       }
       /**
+       * <pre>
+       * List of services provided by the node.
+       * </pre>
+       *
        * <code>repeated int32 services = 6 [json_name = "services"];</code>
        * @param index The index of the element to return.
        * @return The services at the given index.
@@ -3921,6 +4571,10 @@ public final class NetworkOuterClass {
         return services_.getInt(index);
       }
       /**
+       * <pre>
+       * List of services provided by the node.
+       * </pre>
+       *
        * <code>repeated int32 services = 6 [json_name = "services"];</code>
        * @param index The index to set the value at.
        * @param value The services to set.
@@ -3934,6 +4588,10 @@ public final class NetworkOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of services provided by the node.
+       * </pre>
+       *
        * <code>repeated int32 services = 6 [json_name = "services"];</code>
        * @param value The services to add.
        * @return This builder for chaining.
@@ -3945,6 +4603,10 @@ public final class NetworkOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of services provided by the node.
+       * </pre>
+       *
        * <code>repeated int32 services = 6 [json_name = "services"];</code>
        * @param values The services to add.
        * @return This builder for chaining.
@@ -3958,6 +4620,10 @@ public final class NetworkOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of services provided by the node.
+       * </pre>
+       *
        * <code>repeated int32 services = 6 [json_name = "services"];</code>
        * @return This builder for chaining.
        */
@@ -3976,6 +4642,10 @@ public final class NetworkOuterClass {
          }
       }
       /**
+       * <pre>
+       * Names of services provided by the node.
+       * </pre>
+       *
        * <code>repeated string services_names = 7 [json_name = "servicesNames"];</code>
        * @return A list containing the servicesNames.
        */
@@ -3984,6 +4654,10 @@ public final class NetworkOuterClass {
         return servicesNames_.getUnmodifiableView();
       }
       /**
+       * <pre>
+       * Names of services provided by the node.
+       * </pre>
+       *
        * <code>repeated string services_names = 7 [json_name = "servicesNames"];</code>
        * @return The count of servicesNames.
        */
@@ -3991,6 +4665,10 @@ public final class NetworkOuterClass {
         return servicesNames_.size();
       }
       /**
+       * <pre>
+       * Names of services provided by the node.
+       * </pre>
+       *
        * <code>repeated string services_names = 7 [json_name = "servicesNames"];</code>
        * @param index The index of the element to return.
        * @return The servicesNames at the given index.
@@ -3999,6 +4677,10 @@ public final class NetworkOuterClass {
         return servicesNames_.get(index);
       }
       /**
+       * <pre>
+       * Names of services provided by the node.
+       * </pre>
+       *
        * <code>repeated string services_names = 7 [json_name = "servicesNames"];</code>
        * @param index The index of the value to return.
        * @return The bytes of the servicesNames at the given index.
@@ -4008,6 +4690,10 @@ public final class NetworkOuterClass {
         return servicesNames_.getByteString(index);
       }
       /**
+       * <pre>
+       * Names of services provided by the node.
+       * </pre>
+       *
        * <code>repeated string services_names = 7 [json_name = "servicesNames"];</code>
        * @param index The index to set the value at.
        * @param value The servicesNames to set.
@@ -4024,6 +4710,10 @@ public final class NetworkOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Names of services provided by the node.
+       * </pre>
+       *
        * <code>repeated string services_names = 7 [json_name = "servicesNames"];</code>
        * @param value The servicesNames to add.
        * @return This builder for chaining.
@@ -4039,6 +4729,10 @@ public final class NetworkOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Names of services provided by the node.
+       * </pre>
+       *
        * <code>repeated string services_names = 7 [json_name = "servicesNames"];</code>
        * @param values The servicesNames to add.
        * @return This builder for chaining.
@@ -4052,6 +4746,10 @@ public final class NetworkOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Names of services provided by the node.
+       * </pre>
+       *
        * <code>repeated string services_names = 7 [json_name = "servicesNames"];</code>
        * @return This builder for chaining.
        */
@@ -4062,6 +4760,10 @@ public final class NetworkOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Names of services provided by the node.
+       * </pre>
+       *
        * <code>repeated string services_names = 7 [json_name = "servicesNames"];</code>
        * @param value The bytes of the servicesNames to add.
        * @return This builder for chaining.
@@ -4086,6 +4788,10 @@ public final class NetworkOuterClass {
          }
       }
       /**
+       * <pre>
+       * List of addresses associated with the node.
+       * </pre>
+       *
        * <code>repeated string addrs = 8 [json_name = "addrs"];</code>
        * @return A list containing the addrs.
        */
@@ -4094,6 +4800,10 @@ public final class NetworkOuterClass {
         return addrs_.getUnmodifiableView();
       }
       /**
+       * <pre>
+       * List of addresses associated with the node.
+       * </pre>
+       *
        * <code>repeated string addrs = 8 [json_name = "addrs"];</code>
        * @return The count of addrs.
        */
@@ -4101,6 +4811,10 @@ public final class NetworkOuterClass {
         return addrs_.size();
       }
       /**
+       * <pre>
+       * List of addresses associated with the node.
+       * </pre>
+       *
        * <code>repeated string addrs = 8 [json_name = "addrs"];</code>
        * @param index The index of the element to return.
        * @return The addrs at the given index.
@@ -4109,6 +4823,10 @@ public final class NetworkOuterClass {
         return addrs_.get(index);
       }
       /**
+       * <pre>
+       * List of addresses associated with the node.
+       * </pre>
+       *
        * <code>repeated string addrs = 8 [json_name = "addrs"];</code>
        * @param index The index of the value to return.
        * @return The bytes of the addrs at the given index.
@@ -4118,6 +4836,10 @@ public final class NetworkOuterClass {
         return addrs_.getByteString(index);
       }
       /**
+       * <pre>
+       * List of addresses associated with the node.
+       * </pre>
+       *
        * <code>repeated string addrs = 8 [json_name = "addrs"];</code>
        * @param index The index to set the value at.
        * @param value The addrs to set.
@@ -4134,6 +4856,10 @@ public final class NetworkOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of addresses associated with the node.
+       * </pre>
+       *
        * <code>repeated string addrs = 8 [json_name = "addrs"];</code>
        * @param value The addrs to add.
        * @return This builder for chaining.
@@ -4149,6 +4875,10 @@ public final class NetworkOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of addresses associated with the node.
+       * </pre>
+       *
        * <code>repeated string addrs = 8 [json_name = "addrs"];</code>
        * @param values The addrs to add.
        * @return This builder for chaining.
@@ -4162,6 +4892,10 @@ public final class NetworkOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of addresses associated with the node.
+       * </pre>
+       *
        * <code>repeated string addrs = 8 [json_name = "addrs"];</code>
        * @return This builder for chaining.
        */
@@ -4172,6 +4906,10 @@ public final class NetworkOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of addresses associated with the node.
+       * </pre>
+       *
        * <code>repeated string addrs = 8 [json_name = "addrs"];</code>
        * @param value The bytes of the addrs to add.
        * @return This builder for chaining.
@@ -4196,6 +4934,10 @@ public final class NetworkOuterClass {
          }
       }
       /**
+       * <pre>
+       * List of protocols supported by the node.
+       * </pre>
+       *
        * <code>repeated string protocols = 9 [json_name = "protocols"];</code>
        * @return A list containing the protocols.
        */
@@ -4204,6 +4946,10 @@ public final class NetworkOuterClass {
         return protocols_.getUnmodifiableView();
       }
       /**
+       * <pre>
+       * List of protocols supported by the node.
+       * </pre>
+       *
        * <code>repeated string protocols = 9 [json_name = "protocols"];</code>
        * @return The count of protocols.
        */
@@ -4211,6 +4957,10 @@ public final class NetworkOuterClass {
         return protocols_.size();
       }
       /**
+       * <pre>
+       * List of protocols supported by the node.
+       * </pre>
+       *
        * <code>repeated string protocols = 9 [json_name = "protocols"];</code>
        * @param index The index of the element to return.
        * @return The protocols at the given index.
@@ -4219,6 +4969,10 @@ public final class NetworkOuterClass {
         return protocols_.get(index);
       }
       /**
+       * <pre>
+       * List of protocols supported by the node.
+       * </pre>
+       *
        * <code>repeated string protocols = 9 [json_name = "protocols"];</code>
        * @param index The index of the value to return.
        * @return The bytes of the protocols at the given index.
@@ -4228,6 +4982,10 @@ public final class NetworkOuterClass {
         return protocols_.getByteString(index);
       }
       /**
+       * <pre>
+       * List of protocols supported by the node.
+       * </pre>
+       *
        * <code>repeated string protocols = 9 [json_name = "protocols"];</code>
        * @param index The index to set the value at.
        * @param value The protocols to set.
@@ -4244,6 +5002,10 @@ public final class NetworkOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of protocols supported by the node.
+       * </pre>
+       *
        * <code>repeated string protocols = 9 [json_name = "protocols"];</code>
        * @param value The protocols to add.
        * @return This builder for chaining.
@@ -4259,6 +5021,10 @@ public final class NetworkOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of protocols supported by the node.
+       * </pre>
+       *
        * <code>repeated string protocols = 9 [json_name = "protocols"];</code>
        * @param values The protocols to add.
        * @return This builder for chaining.
@@ -4272,6 +5038,10 @@ public final class NetworkOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of protocols supported by the node.
+       * </pre>
+       *
        * <code>repeated string protocols = 9 [json_name = "protocols"];</code>
        * @return This builder for chaining.
        */
@@ -4282,6 +5052,10 @@ public final class NetworkOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of protocols supported by the node.
+       * </pre>
+       *
        * <code>repeated string protocols = 9 [json_name = "protocols"];</code>
        * @param value The bytes of the protocols to add.
        * @return This builder for chaining.
@@ -4366,17 +5140,29 @@ public final class NetworkOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Status of the peer.
+     * </pre>
+     *
      * <code>int32 status = 1 [json_name = "status"];</code>
      * @return The status.
      */
     int getStatus();
 
     /**
+     * <pre>
+     * Moniker of the peer.
+     * </pre>
+     *
      * <code>string moniker = 2 [json_name = "moniker"];</code>
      * @return The moniker.
      */
     java.lang.String getMoniker();
     /**
+     * <pre>
+     * Moniker of the peer.
+     * </pre>
+     *
      * <code>string moniker = 2 [json_name = "moniker"];</code>
      * @return The bytes for moniker.
      */
@@ -4384,11 +5170,19 @@ public final class NetworkOuterClass {
         getMonikerBytes();
 
     /**
+     * <pre>
+     * Agent information of the peer.
+     * </pre>
+     *
      * <code>string agent = 3 [json_name = "agent"];</code>
      * @return The agent.
      */
     java.lang.String getAgent();
     /**
+     * <pre>
+     * Agent information of the peer.
+     * </pre>
+     *
      * <code>string agent = 3 [json_name = "agent"];</code>
      * @return The bytes for agent.
      */
@@ -4396,29 +5190,49 @@ public final class NetworkOuterClass {
         getAgentBytes();
 
     /**
+     * <pre>
+     * Peer ID of the peer.
+     * </pre>
+     *
      * <code>bytes peer_id = 4 [json_name = "peerId"];</code>
      * @return The peerId.
      */
     com.google.protobuf.ByteString getPeerId();
 
     /**
+     * <pre>
+     * Consensus keys used by the peer.
+     * </pre>
+     *
      * <code>repeated string consensus_keys = 5 [json_name = "consensusKeys"];</code>
      * @return A list containing the consensusKeys.
      */
     java.util.List<java.lang.String>
         getConsensusKeysList();
     /**
+     * <pre>
+     * Consensus keys used by the peer.
+     * </pre>
+     *
      * <code>repeated string consensus_keys = 5 [json_name = "consensusKeys"];</code>
      * @return The count of consensusKeys.
      */
     int getConsensusKeysCount();
     /**
+     * <pre>
+     * Consensus keys used by the peer.
+     * </pre>
+     *
      * <code>repeated string consensus_keys = 5 [json_name = "consensusKeys"];</code>
      * @param index The index of the element to return.
      * @return The consensusKeys at the given index.
      */
     java.lang.String getConsensusKeys(int index);
     /**
+     * <pre>
+     * Consensus keys used by the peer.
+     * </pre>
+     *
      * <code>repeated string consensus_keys = 5 [json_name = "consensusKeys"];</code>
      * @param index The index of the value to return.
      * @return The bytes of the consensusKeys at the given index.
@@ -4427,23 +5241,39 @@ public final class NetworkOuterClass {
         getConsensusKeysBytes(int index);
 
     /**
+     * <pre>
+     * Consensus address of the peer.
+     * </pre>
+     *
      * <code>repeated string consensus_address = 6 [json_name = "consensusAddress"];</code>
      * @return A list containing the consensusAddress.
      */
     java.util.List<java.lang.String>
         getConsensusAddressList();
     /**
+     * <pre>
+     * Consensus address of the peer.
+     * </pre>
+     *
      * <code>repeated string consensus_address = 6 [json_name = "consensusAddress"];</code>
      * @return The count of consensusAddress.
      */
     int getConsensusAddressCount();
     /**
+     * <pre>
+     * Consensus address of the peer.
+     * </pre>
+     *
      * <code>repeated string consensus_address = 6 [json_name = "consensusAddress"];</code>
      * @param index The index of the element to return.
      * @return The consensusAddress at the given index.
      */
     java.lang.String getConsensusAddress(int index);
     /**
+     * <pre>
+     * Consensus address of the peer.
+     * </pre>
+     *
      * <code>repeated string consensus_address = 6 [json_name = "consensusAddress"];</code>
      * @param index The index of the value to return.
      * @return The bytes of the consensusAddress at the given index.
@@ -4452,52 +5282,88 @@ public final class NetworkOuterClass {
         getConsensusAddressBytes(int index);
 
     /**
+     * <pre>
+     * Services provided by the peer.
+     * </pre>
+     *
      * <code>uint32 services = 7 [json_name = "services"];</code>
      * @return The services.
      */
     int getServices();
 
     /**
+     * <pre>
+     * Hash of the last block the peer knows.
+     * </pre>
+     *
      * <code>bytes last_block_hash = 8 [json_name = "lastBlockHash"];</code>
      * @return The lastBlockHash.
      */
     com.google.protobuf.ByteString getLastBlockHash();
 
     /**
+     * <pre>
+     * Height of the peer in the blockchain.
+     * </pre>
+     *
      * <code>uint32 height = 9 [json_name = "height"];</code>
      * @return The height.
      */
     int getHeight();
 
     /**
+     * <pre>
+     * Count of received messages.
+     * </pre>
+     *
      * <code>int32 received_messages = 10 [json_name = "receivedMessages"];</code>
      * @return The receivedMessages.
      */
     int getReceivedMessages();
 
     /**
+     * <pre>
+     * Count of invalid messages received.
+     * </pre>
+     *
      * <code>int32 invalid_messages = 11 [json_name = "invalidMessages"];</code>
      * @return The invalidMessages.
      */
     int getInvalidMessages();
 
     /**
+     * <pre>
+     * Timestamp of the last sent message.
+     * </pre>
+     *
      * <code>int64 last_sent = 12 [json_name = "lastSent"];</code>
      * @return The lastSent.
      */
     long getLastSent();
 
     /**
+     * <pre>
+     * Timestamp of the last received message.
+     * </pre>
+     *
      * <code>int64 last_received = 13 [json_name = "lastReceived"];</code>
      * @return The lastReceived.
      */
     long getLastReceived();
 
     /**
+     * <pre>
+     * Bytes sent per message type.
+     * </pre>
+     *
      * <code>map&lt;int32, int64&gt; sent_bytes = 14 [json_name = "sentBytes"];</code>
      */
     int getSentBytesCount();
     /**
+     * <pre>
+     * Bytes sent per message type.
+     * </pre>
+     *
      * <code>map&lt;int32, int64&gt; sent_bytes = 14 [json_name = "sentBytes"];</code>
      */
     boolean containsSentBytes(
@@ -4509,11 +5375,19 @@ public final class NetworkOuterClass {
     java.util.Map<java.lang.Integer, java.lang.Long>
     getSentBytes();
     /**
+     * <pre>
+     * Bytes sent per message type.
+     * </pre>
+     *
      * <code>map&lt;int32, int64&gt; sent_bytes = 14 [json_name = "sentBytes"];</code>
      */
     java.util.Map<java.lang.Integer, java.lang.Long>
     getSentBytesMap();
     /**
+     * <pre>
+     * Bytes sent per message type.
+     * </pre>
+     *
      * <code>map&lt;int32, int64&gt; sent_bytes = 14 [json_name = "sentBytes"];</code>
      */
 
@@ -4521,6 +5395,10 @@ public final class NetworkOuterClass {
         int key,
         long defaultValue);
     /**
+     * <pre>
+     * Bytes sent per message type.
+     * </pre>
+     *
      * <code>map&lt;int32, int64&gt; sent_bytes = 14 [json_name = "sentBytes"];</code>
      */
 
@@ -4528,10 +5406,18 @@ public final class NetworkOuterClass {
         int key);
 
     /**
+     * <pre>
+     * Bytes received per message type.
+     * </pre>
+     *
      * <code>map&lt;int32, int64&gt; received_bytes = 15 [json_name = "receivedBytes"];</code>
      */
     int getReceivedBytesCount();
     /**
+     * <pre>
+     * Bytes received per message type.
+     * </pre>
+     *
      * <code>map&lt;int32, int64&gt; received_bytes = 15 [json_name = "receivedBytes"];</code>
      */
     boolean containsReceivedBytes(
@@ -4543,11 +5429,19 @@ public final class NetworkOuterClass {
     java.util.Map<java.lang.Integer, java.lang.Long>
     getReceivedBytes();
     /**
+     * <pre>
+     * Bytes received per message type.
+     * </pre>
+     *
      * <code>map&lt;int32, int64&gt; received_bytes = 15 [json_name = "receivedBytes"];</code>
      */
     java.util.Map<java.lang.Integer, java.lang.Long>
     getReceivedBytesMap();
     /**
+     * <pre>
+     * Bytes received per message type.
+     * </pre>
+     *
      * <code>map&lt;int32, int64&gt; received_bytes = 15 [json_name = "receivedBytes"];</code>
      */
 
@@ -4555,6 +5449,10 @@ public final class NetworkOuterClass {
         int key,
         long defaultValue);
     /**
+     * <pre>
+     * Bytes received per message type.
+     * </pre>
+     *
      * <code>map&lt;int32, int64&gt; received_bytes = 15 [json_name = "receivedBytes"];</code>
      */
 
@@ -4562,11 +5460,19 @@ public final class NetworkOuterClass {
         int key);
 
     /**
+     * <pre>
+     * Network address of the peer.
+     * </pre>
+     *
      * <code>string address = 16 [json_name = "address"];</code>
      * @return The address.
      */
     java.lang.String getAddress();
     /**
+     * <pre>
+     * Network address of the peer.
+     * </pre>
+     *
      * <code>string address = 16 [json_name = "address"];</code>
      * @return The bytes for address.
      */
@@ -4574,11 +5480,19 @@ public final class NetworkOuterClass {
         getAddressBytes();
 
     /**
+     * <pre>
+     * Direction of connection with the peer.
+     * </pre>
+     *
      * <code>string direction = 17 [json_name = "direction"];</code>
      * @return The direction.
      */
     java.lang.String getDirection();
     /**
+     * <pre>
+     * Direction of connection with the peer.
+     * </pre>
+     *
      * <code>string direction = 17 [json_name = "direction"];</code>
      * @return The bytes for direction.
      */
@@ -4586,23 +5500,39 @@ public final class NetworkOuterClass {
         getDirectionBytes();
 
     /**
+     * <pre>
+     * List of protocols supported by the peer.
+     * </pre>
+     *
      * <code>repeated string protocols = 18 [json_name = "protocols"];</code>
      * @return A list containing the protocols.
      */
     java.util.List<java.lang.String>
         getProtocolsList();
     /**
+     * <pre>
+     * List of protocols supported by the peer.
+     * </pre>
+     *
      * <code>repeated string protocols = 18 [json_name = "protocols"];</code>
      * @return The count of protocols.
      */
     int getProtocolsCount();
     /**
+     * <pre>
+     * List of protocols supported by the peer.
+     * </pre>
+     *
      * <code>repeated string protocols = 18 [json_name = "protocols"];</code>
      * @param index The index of the element to return.
      * @return The protocols at the given index.
      */
     java.lang.String getProtocols(int index);
     /**
+     * <pre>
+     * List of protocols supported by the peer.
+     * </pre>
+     *
      * <code>repeated string protocols = 18 [json_name = "protocols"];</code>
      * @param index The index of the value to return.
      * @return The bytes of the protocols at the given index.
@@ -4611,18 +5541,30 @@ public final class NetworkOuterClass {
         getProtocolsBytes(int index);
 
     /**
+     * <pre>
+     * Total sessions with the peer.
+     * </pre>
+     *
      * <code>int32 total_sessions = 19 [json_name = "totalSessions"];</code>
      * @return The totalSessions.
      */
     int getTotalSessions();
 
     /**
+     * <pre>
+     * Completed sessions with the peer.
+     * </pre>
+     *
      * <code>int32 completed_sessions = 20 [json_name = "completedSessions"];</code>
      * @return The completedSessions.
      */
     int getCompletedSessions();
   }
   /**
+   * <pre>
+   * Information about a peer in the network.
+   * </pre>
+   *
    * Protobuf type {@code pactus.PeerInfo}
    */
   public static final class PeerInfo extends
@@ -4688,6 +5630,10 @@ public final class NetworkOuterClass {
     public static final int STATUS_FIELD_NUMBER = 1;
     private int status_;
     /**
+     * <pre>
+     * Status of the peer.
+     * </pre>
+     *
      * <code>int32 status = 1 [json_name = "status"];</code>
      * @return The status.
      */
@@ -4699,6 +5645,10 @@ public final class NetworkOuterClass {
     public static final int MONIKER_FIELD_NUMBER = 2;
     private volatile java.lang.Object moniker_;
     /**
+     * <pre>
+     * Moniker of the peer.
+     * </pre>
+     *
      * <code>string moniker = 2 [json_name = "moniker"];</code>
      * @return The moniker.
      */
@@ -4716,6 +5666,10 @@ public final class NetworkOuterClass {
       }
     }
     /**
+     * <pre>
+     * Moniker of the peer.
+     * </pre>
+     *
      * <code>string moniker = 2 [json_name = "moniker"];</code>
      * @return The bytes for moniker.
      */
@@ -4737,6 +5691,10 @@ public final class NetworkOuterClass {
     public static final int AGENT_FIELD_NUMBER = 3;
     private volatile java.lang.Object agent_;
     /**
+     * <pre>
+     * Agent information of the peer.
+     * </pre>
+     *
      * <code>string agent = 3 [json_name = "agent"];</code>
      * @return The agent.
      */
@@ -4754,6 +5712,10 @@ public final class NetworkOuterClass {
       }
     }
     /**
+     * <pre>
+     * Agent information of the peer.
+     * </pre>
+     *
      * <code>string agent = 3 [json_name = "agent"];</code>
      * @return The bytes for agent.
      */
@@ -4775,6 +5737,10 @@ public final class NetworkOuterClass {
     public static final int PEER_ID_FIELD_NUMBER = 4;
     private com.google.protobuf.ByteString peerId_;
     /**
+     * <pre>
+     * Peer ID of the peer.
+     * </pre>
+     *
      * <code>bytes peer_id = 4 [json_name = "peerId"];</code>
      * @return The peerId.
      */
@@ -4786,6 +5752,10 @@ public final class NetworkOuterClass {
     public static final int CONSENSUS_KEYS_FIELD_NUMBER = 5;
     private com.google.protobuf.LazyStringList consensusKeys_;
     /**
+     * <pre>
+     * Consensus keys used by the peer.
+     * </pre>
+     *
      * <code>repeated string consensus_keys = 5 [json_name = "consensusKeys"];</code>
      * @return A list containing the consensusKeys.
      */
@@ -4794,6 +5764,10 @@ public final class NetworkOuterClass {
       return consensusKeys_;
     }
     /**
+     * <pre>
+     * Consensus keys used by the peer.
+     * </pre>
+     *
      * <code>repeated string consensus_keys = 5 [json_name = "consensusKeys"];</code>
      * @return The count of consensusKeys.
      */
@@ -4801,6 +5775,10 @@ public final class NetworkOuterClass {
       return consensusKeys_.size();
     }
     /**
+     * <pre>
+     * Consensus keys used by the peer.
+     * </pre>
+     *
      * <code>repeated string consensus_keys = 5 [json_name = "consensusKeys"];</code>
      * @param index The index of the element to return.
      * @return The consensusKeys at the given index.
@@ -4809,6 +5787,10 @@ public final class NetworkOuterClass {
       return consensusKeys_.get(index);
     }
     /**
+     * <pre>
+     * Consensus keys used by the peer.
+     * </pre>
+     *
      * <code>repeated string consensus_keys = 5 [json_name = "consensusKeys"];</code>
      * @param index The index of the value to return.
      * @return The bytes of the consensusKeys at the given index.
@@ -4821,6 +5803,10 @@ public final class NetworkOuterClass {
     public static final int CONSENSUS_ADDRESS_FIELD_NUMBER = 6;
     private com.google.protobuf.LazyStringList consensusAddress_;
     /**
+     * <pre>
+     * Consensus address of the peer.
+     * </pre>
+     *
      * <code>repeated string consensus_address = 6 [json_name = "consensusAddress"];</code>
      * @return A list containing the consensusAddress.
      */
@@ -4829,6 +5815,10 @@ public final class NetworkOuterClass {
       return consensusAddress_;
     }
     /**
+     * <pre>
+     * Consensus address of the peer.
+     * </pre>
+     *
      * <code>repeated string consensus_address = 6 [json_name = "consensusAddress"];</code>
      * @return The count of consensusAddress.
      */
@@ -4836,6 +5826,10 @@ public final class NetworkOuterClass {
       return consensusAddress_.size();
     }
     /**
+     * <pre>
+     * Consensus address of the peer.
+     * </pre>
+     *
      * <code>repeated string consensus_address = 6 [json_name = "consensusAddress"];</code>
      * @param index The index of the element to return.
      * @return The consensusAddress at the given index.
@@ -4844,6 +5838,10 @@ public final class NetworkOuterClass {
       return consensusAddress_.get(index);
     }
     /**
+     * <pre>
+     * Consensus address of the peer.
+     * </pre>
+     *
      * <code>repeated string consensus_address = 6 [json_name = "consensusAddress"];</code>
      * @param index The index of the value to return.
      * @return The bytes of the consensusAddress at the given index.
@@ -4856,6 +5854,10 @@ public final class NetworkOuterClass {
     public static final int SERVICES_FIELD_NUMBER = 7;
     private int services_;
     /**
+     * <pre>
+     * Services provided by the peer.
+     * </pre>
+     *
      * <code>uint32 services = 7 [json_name = "services"];</code>
      * @return The services.
      */
@@ -4867,6 +5869,10 @@ public final class NetworkOuterClass {
     public static final int LAST_BLOCK_HASH_FIELD_NUMBER = 8;
     private com.google.protobuf.ByteString lastBlockHash_;
     /**
+     * <pre>
+     * Hash of the last block the peer knows.
+     * </pre>
+     *
      * <code>bytes last_block_hash = 8 [json_name = "lastBlockHash"];</code>
      * @return The lastBlockHash.
      */
@@ -4878,6 +5884,10 @@ public final class NetworkOuterClass {
     public static final int HEIGHT_FIELD_NUMBER = 9;
     private int height_;
     /**
+     * <pre>
+     * Height of the peer in the blockchain.
+     * </pre>
+     *
      * <code>uint32 height = 9 [json_name = "height"];</code>
      * @return The height.
      */
@@ -4889,6 +5899,10 @@ public final class NetworkOuterClass {
     public static final int RECEIVED_MESSAGES_FIELD_NUMBER = 10;
     private int receivedMessages_;
     /**
+     * <pre>
+     * Count of received messages.
+     * </pre>
+     *
      * <code>int32 received_messages = 10 [json_name = "receivedMessages"];</code>
      * @return The receivedMessages.
      */
@@ -4900,6 +5914,10 @@ public final class NetworkOuterClass {
     public static final int INVALID_MESSAGES_FIELD_NUMBER = 11;
     private int invalidMessages_;
     /**
+     * <pre>
+     * Count of invalid messages received.
+     * </pre>
+     *
      * <code>int32 invalid_messages = 11 [json_name = "invalidMessages"];</code>
      * @return The invalidMessages.
      */
@@ -4911,6 +5929,10 @@ public final class NetworkOuterClass {
     public static final int LAST_SENT_FIELD_NUMBER = 12;
     private long lastSent_;
     /**
+     * <pre>
+     * Timestamp of the last sent message.
+     * </pre>
+     *
      * <code>int64 last_sent = 12 [json_name = "lastSent"];</code>
      * @return The lastSent.
      */
@@ -4922,6 +5944,10 @@ public final class NetworkOuterClass {
     public static final int LAST_RECEIVED_FIELD_NUMBER = 13;
     private long lastReceived_;
     /**
+     * <pre>
+     * Timestamp of the last received message.
+     * </pre>
+     *
      * <code>int64 last_received = 13 [json_name = "lastReceived"];</code>
      * @return The lastReceived.
      */
@@ -4957,6 +5983,10 @@ public final class NetworkOuterClass {
       return internalGetSentBytes().getMap().size();
     }
     /**
+     * <pre>
+     * Bytes sent per message type.
+     * </pre>
+     *
      * <code>map&lt;int32, int64&gt; sent_bytes = 14 [json_name = "sentBytes"];</code>
      */
 
@@ -4975,6 +6005,10 @@ public final class NetworkOuterClass {
       return getSentBytesMap();
     }
     /**
+     * <pre>
+     * Bytes sent per message type.
+     * </pre>
+     *
      * <code>map&lt;int32, int64&gt; sent_bytes = 14 [json_name = "sentBytes"];</code>
      */
     @java.lang.Override
@@ -4983,6 +6017,10 @@ public final class NetworkOuterClass {
       return internalGetSentBytes().getMap();
     }
     /**
+     * <pre>
+     * Bytes sent per message type.
+     * </pre>
+     *
      * <code>map&lt;int32, int64&gt; sent_bytes = 14 [json_name = "sentBytes"];</code>
      */
     @java.lang.Override
@@ -4996,6 +6034,10 @@ public final class NetworkOuterClass {
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
+     * <pre>
+     * Bytes sent per message type.
+     * </pre>
+     *
      * <code>map&lt;int32, int64&gt; sent_bytes = 14 [json_name = "sentBytes"];</code>
      */
     @java.lang.Override
@@ -5038,6 +6080,10 @@ public final class NetworkOuterClass {
       return internalGetReceivedBytes().getMap().size();
     }
     /**
+     * <pre>
+     * Bytes received per message type.
+     * </pre>
+     *
      * <code>map&lt;int32, int64&gt; received_bytes = 15 [json_name = "receivedBytes"];</code>
      */
 
@@ -5056,6 +6102,10 @@ public final class NetworkOuterClass {
       return getReceivedBytesMap();
     }
     /**
+     * <pre>
+     * Bytes received per message type.
+     * </pre>
+     *
      * <code>map&lt;int32, int64&gt; received_bytes = 15 [json_name = "receivedBytes"];</code>
      */
     @java.lang.Override
@@ -5064,6 +6114,10 @@ public final class NetworkOuterClass {
       return internalGetReceivedBytes().getMap();
     }
     /**
+     * <pre>
+     * Bytes received per message type.
+     * </pre>
+     *
      * <code>map&lt;int32, int64&gt; received_bytes = 15 [json_name = "receivedBytes"];</code>
      */
     @java.lang.Override
@@ -5077,6 +6131,10 @@ public final class NetworkOuterClass {
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
+     * <pre>
+     * Bytes received per message type.
+     * </pre>
+     *
      * <code>map&lt;int32, int64&gt; received_bytes = 15 [json_name = "receivedBytes"];</code>
      */
     @java.lang.Override
@@ -5095,6 +6153,10 @@ public final class NetworkOuterClass {
     public static final int ADDRESS_FIELD_NUMBER = 16;
     private volatile java.lang.Object address_;
     /**
+     * <pre>
+     * Network address of the peer.
+     * </pre>
+     *
      * <code>string address = 16 [json_name = "address"];</code>
      * @return The address.
      */
@@ -5112,6 +6174,10 @@ public final class NetworkOuterClass {
       }
     }
     /**
+     * <pre>
+     * Network address of the peer.
+     * </pre>
+     *
      * <code>string address = 16 [json_name = "address"];</code>
      * @return The bytes for address.
      */
@@ -5133,6 +6199,10 @@ public final class NetworkOuterClass {
     public static final int DIRECTION_FIELD_NUMBER = 17;
     private volatile java.lang.Object direction_;
     /**
+     * <pre>
+     * Direction of connection with the peer.
+     * </pre>
+     *
      * <code>string direction = 17 [json_name = "direction"];</code>
      * @return The direction.
      */
@@ -5150,6 +6220,10 @@ public final class NetworkOuterClass {
       }
     }
     /**
+     * <pre>
+     * Direction of connection with the peer.
+     * </pre>
+     *
      * <code>string direction = 17 [json_name = "direction"];</code>
      * @return The bytes for direction.
      */
@@ -5171,6 +6245,10 @@ public final class NetworkOuterClass {
     public static final int PROTOCOLS_FIELD_NUMBER = 18;
     private com.google.protobuf.LazyStringList protocols_;
     /**
+     * <pre>
+     * List of protocols supported by the peer.
+     * </pre>
+     *
      * <code>repeated string protocols = 18 [json_name = "protocols"];</code>
      * @return A list containing the protocols.
      */
@@ -5179,6 +6257,10 @@ public final class NetworkOuterClass {
       return protocols_;
     }
     /**
+     * <pre>
+     * List of protocols supported by the peer.
+     * </pre>
+     *
      * <code>repeated string protocols = 18 [json_name = "protocols"];</code>
      * @return The count of protocols.
      */
@@ -5186,6 +6268,10 @@ public final class NetworkOuterClass {
       return protocols_.size();
     }
     /**
+     * <pre>
+     * List of protocols supported by the peer.
+     * </pre>
+     *
      * <code>repeated string protocols = 18 [json_name = "protocols"];</code>
      * @param index The index of the element to return.
      * @return The protocols at the given index.
@@ -5194,6 +6280,10 @@ public final class NetworkOuterClass {
       return protocols_.get(index);
     }
     /**
+     * <pre>
+     * List of protocols supported by the peer.
+     * </pre>
+     *
      * <code>repeated string protocols = 18 [json_name = "protocols"];</code>
      * @param index The index of the value to return.
      * @return The bytes of the protocols at the given index.
@@ -5206,6 +6296,10 @@ public final class NetworkOuterClass {
     public static final int TOTAL_SESSIONS_FIELD_NUMBER = 19;
     private int totalSessions_;
     /**
+     * <pre>
+     * Total sessions with the peer.
+     * </pre>
+     *
      * <code>int32 total_sessions = 19 [json_name = "totalSessions"];</code>
      * @return The totalSessions.
      */
@@ -5217,6 +6311,10 @@ public final class NetworkOuterClass {
     public static final int COMPLETED_SESSIONS_FIELD_NUMBER = 20;
     private int completedSessions_;
     /**
+     * <pre>
+     * Completed sessions with the peer.
+     * </pre>
+     *
      * <code>int32 completed_sessions = 20 [json_name = "completedSessions"];</code>
      * @return The completedSessions.
      */
@@ -5628,6 +6726,10 @@ public final class NetworkOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Information about a peer in the network.
+     * </pre>
+     *
      * Protobuf type {@code pactus.PeerInfo}
      */
     public static final class Builder extends
@@ -6070,6 +7172,10 @@ public final class NetworkOuterClass {
 
       private int status_ ;
       /**
+       * <pre>
+       * Status of the peer.
+       * </pre>
+       *
        * <code>int32 status = 1 [json_name = "status"];</code>
        * @return The status.
        */
@@ -6078,6 +7184,10 @@ public final class NetworkOuterClass {
         return status_;
       }
       /**
+       * <pre>
+       * Status of the peer.
+       * </pre>
+       *
        * <code>int32 status = 1 [json_name = "status"];</code>
        * @param value The status to set.
        * @return This builder for chaining.
@@ -6089,6 +7199,10 @@ public final class NetworkOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Status of the peer.
+       * </pre>
+       *
        * <code>int32 status = 1 [json_name = "status"];</code>
        * @return This builder for chaining.
        */
@@ -6101,6 +7215,10 @@ public final class NetworkOuterClass {
 
       private java.lang.Object moniker_ = "";
       /**
+       * <pre>
+       * Moniker of the peer.
+       * </pre>
+       *
        * <code>string moniker = 2 [json_name = "moniker"];</code>
        * @return The moniker.
        */
@@ -6117,6 +7235,10 @@ public final class NetworkOuterClass {
         }
       }
       /**
+       * <pre>
+       * Moniker of the peer.
+       * </pre>
+       *
        * <code>string moniker = 2 [json_name = "moniker"];</code>
        * @return The bytes for moniker.
        */
@@ -6134,6 +7256,10 @@ public final class NetworkOuterClass {
         }
       }
       /**
+       * <pre>
+       * Moniker of the peer.
+       * </pre>
+       *
        * <code>string moniker = 2 [json_name = "moniker"];</code>
        * @param value The moniker to set.
        * @return This builder for chaining.
@@ -6149,6 +7275,10 @@ public final class NetworkOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Moniker of the peer.
+       * </pre>
+       *
        * <code>string moniker = 2 [json_name = "moniker"];</code>
        * @return This builder for chaining.
        */
@@ -6159,6 +7289,10 @@ public final class NetworkOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Moniker of the peer.
+       * </pre>
+       *
        * <code>string moniker = 2 [json_name = "moniker"];</code>
        * @param value The bytes for moniker to set.
        * @return This builder for chaining.
@@ -6177,6 +7311,10 @@ public final class NetworkOuterClass {
 
       private java.lang.Object agent_ = "";
       /**
+       * <pre>
+       * Agent information of the peer.
+       * </pre>
+       *
        * <code>string agent = 3 [json_name = "agent"];</code>
        * @return The agent.
        */
@@ -6193,6 +7331,10 @@ public final class NetworkOuterClass {
         }
       }
       /**
+       * <pre>
+       * Agent information of the peer.
+       * </pre>
+       *
        * <code>string agent = 3 [json_name = "agent"];</code>
        * @return The bytes for agent.
        */
@@ -6210,6 +7352,10 @@ public final class NetworkOuterClass {
         }
       }
       /**
+       * <pre>
+       * Agent information of the peer.
+       * </pre>
+       *
        * <code>string agent = 3 [json_name = "agent"];</code>
        * @param value The agent to set.
        * @return This builder for chaining.
@@ -6225,6 +7371,10 @@ public final class NetworkOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Agent information of the peer.
+       * </pre>
+       *
        * <code>string agent = 3 [json_name = "agent"];</code>
        * @return This builder for chaining.
        */
@@ -6235,6 +7385,10 @@ public final class NetworkOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Agent information of the peer.
+       * </pre>
+       *
        * <code>string agent = 3 [json_name = "agent"];</code>
        * @param value The bytes for agent to set.
        * @return This builder for chaining.
@@ -6253,6 +7407,10 @@ public final class NetworkOuterClass {
 
       private com.google.protobuf.ByteString peerId_ = com.google.protobuf.ByteString.EMPTY;
       /**
+       * <pre>
+       * Peer ID of the peer.
+       * </pre>
+       *
        * <code>bytes peer_id = 4 [json_name = "peerId"];</code>
        * @return The peerId.
        */
@@ -6261,6 +7419,10 @@ public final class NetworkOuterClass {
         return peerId_;
       }
       /**
+       * <pre>
+       * Peer ID of the peer.
+       * </pre>
+       *
        * <code>bytes peer_id = 4 [json_name = "peerId"];</code>
        * @param value The peerId to set.
        * @return This builder for chaining.
@@ -6275,6 +7437,10 @@ public final class NetworkOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Peer ID of the peer.
+       * </pre>
+       *
        * <code>bytes peer_id = 4 [json_name = "peerId"];</code>
        * @return This builder for chaining.
        */
@@ -6293,6 +7459,10 @@ public final class NetworkOuterClass {
          }
       }
       /**
+       * <pre>
+       * Consensus keys used by the peer.
+       * </pre>
+       *
        * <code>repeated string consensus_keys = 5 [json_name = "consensusKeys"];</code>
        * @return A list containing the consensusKeys.
        */
@@ -6301,6 +7471,10 @@ public final class NetworkOuterClass {
         return consensusKeys_.getUnmodifiableView();
       }
       /**
+       * <pre>
+       * Consensus keys used by the peer.
+       * </pre>
+       *
        * <code>repeated string consensus_keys = 5 [json_name = "consensusKeys"];</code>
        * @return The count of consensusKeys.
        */
@@ -6308,6 +7482,10 @@ public final class NetworkOuterClass {
         return consensusKeys_.size();
       }
       /**
+       * <pre>
+       * Consensus keys used by the peer.
+       * </pre>
+       *
        * <code>repeated string consensus_keys = 5 [json_name = "consensusKeys"];</code>
        * @param index The index of the element to return.
        * @return The consensusKeys at the given index.
@@ -6316,6 +7494,10 @@ public final class NetworkOuterClass {
         return consensusKeys_.get(index);
       }
       /**
+       * <pre>
+       * Consensus keys used by the peer.
+       * </pre>
+       *
        * <code>repeated string consensus_keys = 5 [json_name = "consensusKeys"];</code>
        * @param index The index of the value to return.
        * @return The bytes of the consensusKeys at the given index.
@@ -6325,6 +7507,10 @@ public final class NetworkOuterClass {
         return consensusKeys_.getByteString(index);
       }
       /**
+       * <pre>
+       * Consensus keys used by the peer.
+       * </pre>
+       *
        * <code>repeated string consensus_keys = 5 [json_name = "consensusKeys"];</code>
        * @param index The index to set the value at.
        * @param value The consensusKeys to set.
@@ -6341,6 +7527,10 @@ public final class NetworkOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Consensus keys used by the peer.
+       * </pre>
+       *
        * <code>repeated string consensus_keys = 5 [json_name = "consensusKeys"];</code>
        * @param value The consensusKeys to add.
        * @return This builder for chaining.
@@ -6356,6 +7546,10 @@ public final class NetworkOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Consensus keys used by the peer.
+       * </pre>
+       *
        * <code>repeated string consensus_keys = 5 [json_name = "consensusKeys"];</code>
        * @param values The consensusKeys to add.
        * @return This builder for chaining.
@@ -6369,6 +7563,10 @@ public final class NetworkOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Consensus keys used by the peer.
+       * </pre>
+       *
        * <code>repeated string consensus_keys = 5 [json_name = "consensusKeys"];</code>
        * @return This builder for chaining.
        */
@@ -6379,6 +7577,10 @@ public final class NetworkOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Consensus keys used by the peer.
+       * </pre>
+       *
        * <code>repeated string consensus_keys = 5 [json_name = "consensusKeys"];</code>
        * @param value The bytes of the consensusKeys to add.
        * @return This builder for chaining.
@@ -6403,6 +7605,10 @@ public final class NetworkOuterClass {
          }
       }
       /**
+       * <pre>
+       * Consensus address of the peer.
+       * </pre>
+       *
        * <code>repeated string consensus_address = 6 [json_name = "consensusAddress"];</code>
        * @return A list containing the consensusAddress.
        */
@@ -6411,6 +7617,10 @@ public final class NetworkOuterClass {
         return consensusAddress_.getUnmodifiableView();
       }
       /**
+       * <pre>
+       * Consensus address of the peer.
+       * </pre>
+       *
        * <code>repeated string consensus_address = 6 [json_name = "consensusAddress"];</code>
        * @return The count of consensusAddress.
        */
@@ -6418,6 +7628,10 @@ public final class NetworkOuterClass {
         return consensusAddress_.size();
       }
       /**
+       * <pre>
+       * Consensus address of the peer.
+       * </pre>
+       *
        * <code>repeated string consensus_address = 6 [json_name = "consensusAddress"];</code>
        * @param index The index of the element to return.
        * @return The consensusAddress at the given index.
@@ -6426,6 +7640,10 @@ public final class NetworkOuterClass {
         return consensusAddress_.get(index);
       }
       /**
+       * <pre>
+       * Consensus address of the peer.
+       * </pre>
+       *
        * <code>repeated string consensus_address = 6 [json_name = "consensusAddress"];</code>
        * @param index The index of the value to return.
        * @return The bytes of the consensusAddress at the given index.
@@ -6435,6 +7653,10 @@ public final class NetworkOuterClass {
         return consensusAddress_.getByteString(index);
       }
       /**
+       * <pre>
+       * Consensus address of the peer.
+       * </pre>
+       *
        * <code>repeated string consensus_address = 6 [json_name = "consensusAddress"];</code>
        * @param index The index to set the value at.
        * @param value The consensusAddress to set.
@@ -6451,6 +7673,10 @@ public final class NetworkOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Consensus address of the peer.
+       * </pre>
+       *
        * <code>repeated string consensus_address = 6 [json_name = "consensusAddress"];</code>
        * @param value The consensusAddress to add.
        * @return This builder for chaining.
@@ -6466,6 +7692,10 @@ public final class NetworkOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Consensus address of the peer.
+       * </pre>
+       *
        * <code>repeated string consensus_address = 6 [json_name = "consensusAddress"];</code>
        * @param values The consensusAddress to add.
        * @return This builder for chaining.
@@ -6479,6 +7709,10 @@ public final class NetworkOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Consensus address of the peer.
+       * </pre>
+       *
        * <code>repeated string consensus_address = 6 [json_name = "consensusAddress"];</code>
        * @return This builder for chaining.
        */
@@ -6489,6 +7723,10 @@ public final class NetworkOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Consensus address of the peer.
+       * </pre>
+       *
        * <code>repeated string consensus_address = 6 [json_name = "consensusAddress"];</code>
        * @param value The bytes of the consensusAddress to add.
        * @return This builder for chaining.
@@ -6507,6 +7745,10 @@ public final class NetworkOuterClass {
 
       private int services_ ;
       /**
+       * <pre>
+       * Services provided by the peer.
+       * </pre>
+       *
        * <code>uint32 services = 7 [json_name = "services"];</code>
        * @return The services.
        */
@@ -6515,6 +7757,10 @@ public final class NetworkOuterClass {
         return services_;
       }
       /**
+       * <pre>
+       * Services provided by the peer.
+       * </pre>
+       *
        * <code>uint32 services = 7 [json_name = "services"];</code>
        * @param value The services to set.
        * @return This builder for chaining.
@@ -6526,6 +7772,10 @@ public final class NetworkOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Services provided by the peer.
+       * </pre>
+       *
        * <code>uint32 services = 7 [json_name = "services"];</code>
        * @return This builder for chaining.
        */
@@ -6538,6 +7788,10 @@ public final class NetworkOuterClass {
 
       private com.google.protobuf.ByteString lastBlockHash_ = com.google.protobuf.ByteString.EMPTY;
       /**
+       * <pre>
+       * Hash of the last block the peer knows.
+       * </pre>
+       *
        * <code>bytes last_block_hash = 8 [json_name = "lastBlockHash"];</code>
        * @return The lastBlockHash.
        */
@@ -6546,6 +7800,10 @@ public final class NetworkOuterClass {
         return lastBlockHash_;
       }
       /**
+       * <pre>
+       * Hash of the last block the peer knows.
+       * </pre>
+       *
        * <code>bytes last_block_hash = 8 [json_name = "lastBlockHash"];</code>
        * @param value The lastBlockHash to set.
        * @return This builder for chaining.
@@ -6560,6 +7818,10 @@ public final class NetworkOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Hash of the last block the peer knows.
+       * </pre>
+       *
        * <code>bytes last_block_hash = 8 [json_name = "lastBlockHash"];</code>
        * @return This builder for chaining.
        */
@@ -6572,6 +7834,10 @@ public final class NetworkOuterClass {
 
       private int height_ ;
       /**
+       * <pre>
+       * Height of the peer in the blockchain.
+       * </pre>
+       *
        * <code>uint32 height = 9 [json_name = "height"];</code>
        * @return The height.
        */
@@ -6580,6 +7846,10 @@ public final class NetworkOuterClass {
         return height_;
       }
       /**
+       * <pre>
+       * Height of the peer in the blockchain.
+       * </pre>
+       *
        * <code>uint32 height = 9 [json_name = "height"];</code>
        * @param value The height to set.
        * @return This builder for chaining.
@@ -6591,6 +7861,10 @@ public final class NetworkOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Height of the peer in the blockchain.
+       * </pre>
+       *
        * <code>uint32 height = 9 [json_name = "height"];</code>
        * @return This builder for chaining.
        */
@@ -6603,6 +7877,10 @@ public final class NetworkOuterClass {
 
       private int receivedMessages_ ;
       /**
+       * <pre>
+       * Count of received messages.
+       * </pre>
+       *
        * <code>int32 received_messages = 10 [json_name = "receivedMessages"];</code>
        * @return The receivedMessages.
        */
@@ -6611,6 +7889,10 @@ public final class NetworkOuterClass {
         return receivedMessages_;
       }
       /**
+       * <pre>
+       * Count of received messages.
+       * </pre>
+       *
        * <code>int32 received_messages = 10 [json_name = "receivedMessages"];</code>
        * @param value The receivedMessages to set.
        * @return This builder for chaining.
@@ -6622,6 +7904,10 @@ public final class NetworkOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Count of received messages.
+       * </pre>
+       *
        * <code>int32 received_messages = 10 [json_name = "receivedMessages"];</code>
        * @return This builder for chaining.
        */
@@ -6634,6 +7920,10 @@ public final class NetworkOuterClass {
 
       private int invalidMessages_ ;
       /**
+       * <pre>
+       * Count of invalid messages received.
+       * </pre>
+       *
        * <code>int32 invalid_messages = 11 [json_name = "invalidMessages"];</code>
        * @return The invalidMessages.
        */
@@ -6642,6 +7932,10 @@ public final class NetworkOuterClass {
         return invalidMessages_;
       }
       /**
+       * <pre>
+       * Count of invalid messages received.
+       * </pre>
+       *
        * <code>int32 invalid_messages = 11 [json_name = "invalidMessages"];</code>
        * @param value The invalidMessages to set.
        * @return This builder for chaining.
@@ -6653,6 +7947,10 @@ public final class NetworkOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Count of invalid messages received.
+       * </pre>
+       *
        * <code>int32 invalid_messages = 11 [json_name = "invalidMessages"];</code>
        * @return This builder for chaining.
        */
@@ -6665,6 +7963,10 @@ public final class NetworkOuterClass {
 
       private long lastSent_ ;
       /**
+       * <pre>
+       * Timestamp of the last sent message.
+       * </pre>
+       *
        * <code>int64 last_sent = 12 [json_name = "lastSent"];</code>
        * @return The lastSent.
        */
@@ -6673,6 +7975,10 @@ public final class NetworkOuterClass {
         return lastSent_;
       }
       /**
+       * <pre>
+       * Timestamp of the last sent message.
+       * </pre>
+       *
        * <code>int64 last_sent = 12 [json_name = "lastSent"];</code>
        * @param value The lastSent to set.
        * @return This builder for chaining.
@@ -6684,6 +7990,10 @@ public final class NetworkOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Timestamp of the last sent message.
+       * </pre>
+       *
        * <code>int64 last_sent = 12 [json_name = "lastSent"];</code>
        * @return This builder for chaining.
        */
@@ -6696,6 +8006,10 @@ public final class NetworkOuterClass {
 
       private long lastReceived_ ;
       /**
+       * <pre>
+       * Timestamp of the last received message.
+       * </pre>
+       *
        * <code>int64 last_received = 13 [json_name = "lastReceived"];</code>
        * @return The lastReceived.
        */
@@ -6704,6 +8018,10 @@ public final class NetworkOuterClass {
         return lastReceived_;
       }
       /**
+       * <pre>
+       * Timestamp of the last received message.
+       * </pre>
+       *
        * <code>int64 last_received = 13 [json_name = "lastReceived"];</code>
        * @param value The lastReceived to set.
        * @return This builder for chaining.
@@ -6715,6 +8033,10 @@ public final class NetworkOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Timestamp of the last received message.
+       * </pre>
+       *
        * <code>int64 last_received = 13 [json_name = "lastReceived"];</code>
        * @return This builder for chaining.
        */
@@ -6752,6 +8074,10 @@ public final class NetworkOuterClass {
         return internalGetSentBytes().getMap().size();
       }
       /**
+       * <pre>
+       * Bytes sent per message type.
+       * </pre>
+       *
        * <code>map&lt;int32, int64&gt; sent_bytes = 14 [json_name = "sentBytes"];</code>
        */
 
@@ -6770,6 +8096,10 @@ public final class NetworkOuterClass {
         return getSentBytesMap();
       }
       /**
+       * <pre>
+       * Bytes sent per message type.
+       * </pre>
+       *
        * <code>map&lt;int32, int64&gt; sent_bytes = 14 [json_name = "sentBytes"];</code>
        */
       @java.lang.Override
@@ -6778,6 +8108,10 @@ public final class NetworkOuterClass {
         return internalGetSentBytes().getMap();
       }
       /**
+       * <pre>
+       * Bytes sent per message type.
+       * </pre>
+       *
        * <code>map&lt;int32, int64&gt; sent_bytes = 14 [json_name = "sentBytes"];</code>
        */
       @java.lang.Override
@@ -6791,6 +8125,10 @@ public final class NetworkOuterClass {
         return map.containsKey(key) ? map.get(key) : defaultValue;
       }
       /**
+       * <pre>
+       * Bytes sent per message type.
+       * </pre>
+       *
        * <code>map&lt;int32, int64&gt; sent_bytes = 14 [json_name = "sentBytes"];</code>
        */
       @java.lang.Override
@@ -6812,6 +8150,10 @@ public final class NetworkOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Bytes sent per message type.
+       * </pre>
+       *
        * <code>map&lt;int32, int64&gt; sent_bytes = 14 [json_name = "sentBytes"];</code>
        */
 
@@ -6831,6 +8173,10 @@ public final class NetworkOuterClass {
         return internalGetMutableSentBytes().getMutableMap();
       }
       /**
+       * <pre>
+       * Bytes sent per message type.
+       * </pre>
+       *
        * <code>map&lt;int32, int64&gt; sent_bytes = 14 [json_name = "sentBytes"];</code>
        */
       public Builder putSentBytes(
@@ -6843,6 +8189,10 @@ public final class NetworkOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Bytes sent per message type.
+       * </pre>
+       *
        * <code>map&lt;int32, int64&gt; sent_bytes = 14 [json_name = "sentBytes"];</code>
        */
 
@@ -6880,6 +8230,10 @@ public final class NetworkOuterClass {
         return internalGetReceivedBytes().getMap().size();
       }
       /**
+       * <pre>
+       * Bytes received per message type.
+       * </pre>
+       *
        * <code>map&lt;int32, int64&gt; received_bytes = 15 [json_name = "receivedBytes"];</code>
        */
 
@@ -6898,6 +8252,10 @@ public final class NetworkOuterClass {
         return getReceivedBytesMap();
       }
       /**
+       * <pre>
+       * Bytes received per message type.
+       * </pre>
+       *
        * <code>map&lt;int32, int64&gt; received_bytes = 15 [json_name = "receivedBytes"];</code>
        */
       @java.lang.Override
@@ -6906,6 +8264,10 @@ public final class NetworkOuterClass {
         return internalGetReceivedBytes().getMap();
       }
       /**
+       * <pre>
+       * Bytes received per message type.
+       * </pre>
+       *
        * <code>map&lt;int32, int64&gt; received_bytes = 15 [json_name = "receivedBytes"];</code>
        */
       @java.lang.Override
@@ -6919,6 +8281,10 @@ public final class NetworkOuterClass {
         return map.containsKey(key) ? map.get(key) : defaultValue;
       }
       /**
+       * <pre>
+       * Bytes received per message type.
+       * </pre>
+       *
        * <code>map&lt;int32, int64&gt; received_bytes = 15 [json_name = "receivedBytes"];</code>
        */
       @java.lang.Override
@@ -6940,6 +8306,10 @@ public final class NetworkOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Bytes received per message type.
+       * </pre>
+       *
        * <code>map&lt;int32, int64&gt; received_bytes = 15 [json_name = "receivedBytes"];</code>
        */
 
@@ -6959,6 +8329,10 @@ public final class NetworkOuterClass {
         return internalGetMutableReceivedBytes().getMutableMap();
       }
       /**
+       * <pre>
+       * Bytes received per message type.
+       * </pre>
+       *
        * <code>map&lt;int32, int64&gt; received_bytes = 15 [json_name = "receivedBytes"];</code>
        */
       public Builder putReceivedBytes(
@@ -6971,6 +8345,10 @@ public final class NetworkOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Bytes received per message type.
+       * </pre>
+       *
        * <code>map&lt;int32, int64&gt; received_bytes = 15 [json_name = "receivedBytes"];</code>
        */
 
@@ -6983,6 +8361,10 @@ public final class NetworkOuterClass {
 
       private java.lang.Object address_ = "";
       /**
+       * <pre>
+       * Network address of the peer.
+       * </pre>
+       *
        * <code>string address = 16 [json_name = "address"];</code>
        * @return The address.
        */
@@ -6999,6 +8381,10 @@ public final class NetworkOuterClass {
         }
       }
       /**
+       * <pre>
+       * Network address of the peer.
+       * </pre>
+       *
        * <code>string address = 16 [json_name = "address"];</code>
        * @return The bytes for address.
        */
@@ -7016,6 +8402,10 @@ public final class NetworkOuterClass {
         }
       }
       /**
+       * <pre>
+       * Network address of the peer.
+       * </pre>
+       *
        * <code>string address = 16 [json_name = "address"];</code>
        * @param value The address to set.
        * @return This builder for chaining.
@@ -7031,6 +8421,10 @@ public final class NetworkOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Network address of the peer.
+       * </pre>
+       *
        * <code>string address = 16 [json_name = "address"];</code>
        * @return This builder for chaining.
        */
@@ -7041,6 +8435,10 @@ public final class NetworkOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Network address of the peer.
+       * </pre>
+       *
        * <code>string address = 16 [json_name = "address"];</code>
        * @param value The bytes for address to set.
        * @return This builder for chaining.
@@ -7059,6 +8457,10 @@ public final class NetworkOuterClass {
 
       private java.lang.Object direction_ = "";
       /**
+       * <pre>
+       * Direction of connection with the peer.
+       * </pre>
+       *
        * <code>string direction = 17 [json_name = "direction"];</code>
        * @return The direction.
        */
@@ -7075,6 +8477,10 @@ public final class NetworkOuterClass {
         }
       }
       /**
+       * <pre>
+       * Direction of connection with the peer.
+       * </pre>
+       *
        * <code>string direction = 17 [json_name = "direction"];</code>
        * @return The bytes for direction.
        */
@@ -7092,6 +8498,10 @@ public final class NetworkOuterClass {
         }
       }
       /**
+       * <pre>
+       * Direction of connection with the peer.
+       * </pre>
+       *
        * <code>string direction = 17 [json_name = "direction"];</code>
        * @param value The direction to set.
        * @return This builder for chaining.
@@ -7107,6 +8517,10 @@ public final class NetworkOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Direction of connection with the peer.
+       * </pre>
+       *
        * <code>string direction = 17 [json_name = "direction"];</code>
        * @return This builder for chaining.
        */
@@ -7117,6 +8531,10 @@ public final class NetworkOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Direction of connection with the peer.
+       * </pre>
+       *
        * <code>string direction = 17 [json_name = "direction"];</code>
        * @param value The bytes for direction to set.
        * @return This builder for chaining.
@@ -7141,6 +8559,10 @@ public final class NetworkOuterClass {
          }
       }
       /**
+       * <pre>
+       * List of protocols supported by the peer.
+       * </pre>
+       *
        * <code>repeated string protocols = 18 [json_name = "protocols"];</code>
        * @return A list containing the protocols.
        */
@@ -7149,6 +8571,10 @@ public final class NetworkOuterClass {
         return protocols_.getUnmodifiableView();
       }
       /**
+       * <pre>
+       * List of protocols supported by the peer.
+       * </pre>
+       *
        * <code>repeated string protocols = 18 [json_name = "protocols"];</code>
        * @return The count of protocols.
        */
@@ -7156,6 +8582,10 @@ public final class NetworkOuterClass {
         return protocols_.size();
       }
       /**
+       * <pre>
+       * List of protocols supported by the peer.
+       * </pre>
+       *
        * <code>repeated string protocols = 18 [json_name = "protocols"];</code>
        * @param index The index of the element to return.
        * @return The protocols at the given index.
@@ -7164,6 +8594,10 @@ public final class NetworkOuterClass {
         return protocols_.get(index);
       }
       /**
+       * <pre>
+       * List of protocols supported by the peer.
+       * </pre>
+       *
        * <code>repeated string protocols = 18 [json_name = "protocols"];</code>
        * @param index The index of the value to return.
        * @return The bytes of the protocols at the given index.
@@ -7173,6 +8607,10 @@ public final class NetworkOuterClass {
         return protocols_.getByteString(index);
       }
       /**
+       * <pre>
+       * List of protocols supported by the peer.
+       * </pre>
+       *
        * <code>repeated string protocols = 18 [json_name = "protocols"];</code>
        * @param index The index to set the value at.
        * @param value The protocols to set.
@@ -7189,6 +8627,10 @@ public final class NetworkOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of protocols supported by the peer.
+       * </pre>
+       *
        * <code>repeated string protocols = 18 [json_name = "protocols"];</code>
        * @param value The protocols to add.
        * @return This builder for chaining.
@@ -7204,6 +8646,10 @@ public final class NetworkOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of protocols supported by the peer.
+       * </pre>
+       *
        * <code>repeated string protocols = 18 [json_name = "protocols"];</code>
        * @param values The protocols to add.
        * @return This builder for chaining.
@@ -7217,6 +8663,10 @@ public final class NetworkOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of protocols supported by the peer.
+       * </pre>
+       *
        * <code>repeated string protocols = 18 [json_name = "protocols"];</code>
        * @return This builder for chaining.
        */
@@ -7227,6 +8677,10 @@ public final class NetworkOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of protocols supported by the peer.
+       * </pre>
+       *
        * <code>repeated string protocols = 18 [json_name = "protocols"];</code>
        * @param value The bytes of the protocols to add.
        * @return This builder for chaining.
@@ -7245,6 +8699,10 @@ public final class NetworkOuterClass {
 
       private int totalSessions_ ;
       /**
+       * <pre>
+       * Total sessions with the peer.
+       * </pre>
+       *
        * <code>int32 total_sessions = 19 [json_name = "totalSessions"];</code>
        * @return The totalSessions.
        */
@@ -7253,6 +8711,10 @@ public final class NetworkOuterClass {
         return totalSessions_;
       }
       /**
+       * <pre>
+       * Total sessions with the peer.
+       * </pre>
+       *
        * <code>int32 total_sessions = 19 [json_name = "totalSessions"];</code>
        * @param value The totalSessions to set.
        * @return This builder for chaining.
@@ -7264,6 +8726,10 @@ public final class NetworkOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Total sessions with the peer.
+       * </pre>
+       *
        * <code>int32 total_sessions = 19 [json_name = "totalSessions"];</code>
        * @return This builder for chaining.
        */
@@ -7276,6 +8742,10 @@ public final class NetworkOuterClass {
 
       private int completedSessions_ ;
       /**
+       * <pre>
+       * Completed sessions with the peer.
+       * </pre>
+       *
        * <code>int32 completed_sessions = 20 [json_name = "completedSessions"];</code>
        * @return The completedSessions.
        */
@@ -7284,6 +8754,10 @@ public final class NetworkOuterClass {
         return completedSessions_;
       }
       /**
+       * <pre>
+       * Completed sessions with the peer.
+       * </pre>
+       *
        * <code>int32 completed_sessions = 20 [json_name = "completedSessions"];</code>
        * @param value The completedSessions to set.
        * @return This builder for chaining.
@@ -7295,6 +8769,10 @@ public final class NetworkOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Completed sessions with the peer.
+       * </pre>
+       *
        * <code>int32 completed_sessions = 20 [json_name = "completedSessions"];</code>
        * @return This builder for chaining.
        */

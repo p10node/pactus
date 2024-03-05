@@ -31,12 +31,8 @@ import (
 var _ Network = &network{}
 
 type network struct {
-	// TODO: Keeping context inside struct is bad practice:
-	// Read more here: https://go.dev/blog/context-and-structs
-	// We should remove it from here and pass it as first argument of functions
-	// Adding these linter later:  contextcheck and containedctx
 	ctx            context.Context
-	cancel         func()
+	cancel         context.CancelFunc
 	config         *Config
 	host           lp2phost.Host
 	mdns           *mdnsService
@@ -133,8 +129,9 @@ func newNetwork(conf *Config, log *logger.SubLogger, opts []lp2p.Option) (*netwo
 	// The connection manager doesn't reject any connections.
 	// It just triggers a pruning run once the high watermark is reached (or surpassed).
 
-	lowWM := conf.ScaledMinConns()                          // Low Watermark
-	highWM := conf.ScaledMaxConns() - conf.ConnsThreshold() // High Watermark
+	//
+	lowWM := conf.ScaledMinConns()                          // Low Watermark, ex: 64 (max)
+	highWM := conf.ScaledMaxConns() - conf.ScaledMinConns() // High Watermark, ex: 64 (max) - 16 (min) = 48
 	connMgr, err := lp2pconnmgr.NewConnManager(
 		lowWM, highWM,
 		lp2pconnmgr.WithGracePeriod(time.Minute),
@@ -269,13 +266,11 @@ func newNetwork(conf *Config, log *logger.SubLogger, opts []lp2p.Option) (*netwo
 	self.gossip = newGossipService(ctx, self.host, self.eventChannel, conf, self.logger)
 	self.notifee = newNotifeeService(ctx, self.host, self.eventChannel, self.peerMgr, streamProtocolID, self.logger)
 
-	self.host.Network().Notify(self.notifee)
-	self.connGater.SetPeerManager(self.peerMgr)
-
 	self.logger.Info("network setup", "id", self.host.ID(),
 		"name", conf.NetworkName,
 		"address", conf.ListenAddrs(),
-		"bootstrapper", conf.IsBootstrapper)
+		"bootstrapper", conf.IsBootstrapper,
+		"maxConns", conf.MaxConns)
 
 	return self, nil
 }
@@ -344,6 +339,9 @@ func (n *network) Start() error {
 	n.peerMgr.Start()
 	n.notifee.Start()
 
+	n.host.Network().Notify(n.notifee)
+	n.connGater.SetPeerManager(n.peerMgr)
+
 	n.logger.Info("network started", "addr", n.host.Addrs(), "id", n.host.ID())
 
 	return nil
@@ -351,6 +349,7 @@ func (n *network) Start() error {
 
 func (n *network) Stop() {
 	n.cancel()
+	n.logger.Debug("context closed", "reason", n.ctx.Err())
 
 	if n.mdns != nil {
 		n.mdns.Stop()
@@ -487,4 +486,12 @@ func (n *network) Protocols() []string {
 	}
 
 	return protocols
+}
+
+func (n *network) NumInbound() int {
+	return n.peerMgr.NumInbound()
+}
+
+func (n *network) NumOutbound() int {
+	return n.peerMgr.NumOutbound()
 }

@@ -3,6 +3,10 @@ package pactus.transaction;
 import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
+ * <pre>
+ * Transaction service defines various RPC methods for interacting with
+ * transactions.
+ * </pre>
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.50.2)",
@@ -277,10 +281,18 @@ public final class TransactionGrpc {
   }
 
   /**
+   * <pre>
+   * Transaction service defines various RPC methods for interacting with
+   * transactions.
+   * </pre>
    */
   public static abstract class TransactionImplBase implements io.grpc.BindableService {
 
     /**
+     * <pre>
+     * GetTransaction retrieves transaction details based on the provided request
+     * parameters.
+     * </pre>
      */
     public void getTransaction(pactus.transaction.TransactionOuterClass.GetTransactionRequest request,
         io.grpc.stub.StreamObserver<pactus.transaction.TransactionOuterClass.GetTransactionResponse> responseObserver) {
@@ -288,6 +300,10 @@ public final class TransactionGrpc {
     }
 
     /**
+     * <pre>
+     * CalculateFee calculates the transaction fee based on the specified amount
+     * and payload type.
+     * </pre>
      */
     public void calculateFee(pactus.transaction.TransactionOuterClass.CalculateFeeRequest request,
         io.grpc.stub.StreamObserver<pactus.transaction.TransactionOuterClass.CalculateFeeResponse> responseObserver) {
@@ -295,6 +311,9 @@ public final class TransactionGrpc {
     }
 
     /**
+     * <pre>
+     * BroadcastTransaction broadcasts a signed transaction to the network.
+     * </pre>
      */
     public void broadcastTransaction(pactus.transaction.TransactionOuterClass.BroadcastTransactionRequest request,
         io.grpc.stub.StreamObserver<pactus.transaction.TransactionOuterClass.BroadcastTransactionResponse> responseObserver) {
@@ -302,6 +321,9 @@ public final class TransactionGrpc {
     }
 
     /**
+     * <pre>
+     * GetRawTransferTransaction retrieves raw details of a transfer transaction.
+     * </pre>
      */
     public void getRawTransferTransaction(pactus.transaction.TransactionOuterClass.GetRawTransferTransactionRequest request,
         io.grpc.stub.StreamObserver<pactus.transaction.TransactionOuterClass.GetRawTransactionResponse> responseObserver) {
@@ -309,6 +331,9 @@ public final class TransactionGrpc {
     }
 
     /**
+     * <pre>
+     * GetRawBondTransaction retrieves raw details of a bond transaction.
+     * </pre>
      */
     public void getRawBondTransaction(pactus.transaction.TransactionOuterClass.GetRawBondTransactionRequest request,
         io.grpc.stub.StreamObserver<pactus.transaction.TransactionOuterClass.GetRawTransactionResponse> responseObserver) {
@@ -316,6 +341,9 @@ public final class TransactionGrpc {
     }
 
     /**
+     * <pre>
+     * GetRawUnBondTransaction retrieves raw details of an unbond transaction.
+     * </pre>
      */
     public void getRawUnBondTransaction(pactus.transaction.TransactionOuterClass.GetRawUnBondTransactionRequest request,
         io.grpc.stub.StreamObserver<pactus.transaction.TransactionOuterClass.GetRawTransactionResponse> responseObserver) {
@@ -323,6 +351,9 @@ public final class TransactionGrpc {
     }
 
     /**
+     * <pre>
+     * GetRawWithdrawTransaction retrieves raw details of a withdraw transaction.
+     * </pre>
      */
     public void getRawWithdrawTransaction(pactus.transaction.TransactionOuterClass.GetRawWithdrawTransactionRequest request,
         io.grpc.stub.StreamObserver<pactus.transaction.TransactionOuterClass.GetRawTransactionResponse> responseObserver) {
@@ -385,6 +416,10 @@ public final class TransactionGrpc {
   }
 
   /**
+   * <pre>
+   * Transaction service defines various RPC methods for interacting with
+   * transactions.
+   * </pre>
    */
   public static final class TransactionStub extends io.grpc.stub.AbstractAsyncStub<TransactionStub> {
     private TransactionStub(
@@ -399,6 +434,10 @@ public final class TransactionGrpc {
     }
 
     /**
+     * <pre>
+     * GetTransaction retrieves transaction details based on the provided request
+     * parameters.
+     * </pre>
      */
     public void getTransaction(pactus.transaction.TransactionOuterClass.GetTransactionRequest request,
         io.grpc.stub.StreamObserver<pactus.transaction.TransactionOuterClass.GetTransactionResponse> responseObserver) {
@@ -407,6 +446,10 @@ public final class TransactionGrpc {
     }
 
     /**
+     * <pre>
+     * CalculateFee calculates the transaction fee based on the specified amount
+     * and payload type.
+     * </pre>
      */
     public void calculateFee(pactus.transaction.TransactionOuterClass.CalculateFeeRequest request,
         io.grpc.stub.StreamObserver<pactus.transaction.TransactionOuterClass.CalculateFeeResponse> responseObserver) {
@@ -415,6 +458,9 @@ public final class TransactionGrpc {
     }
 
     /**
+     * <pre>
+     * BroadcastTransaction broadcasts a signed transaction to the network.
+     * </pre>
      */
     public void broadcastTransaction(pactus.transaction.TransactionOuterClass.BroadcastTransactionRequest request,
         io.grpc.stub.StreamObserver<pactus.transaction.TransactionOuterClass.BroadcastTransactionResponse> responseObserver) {
@@ -423,6 +469,9 @@ public final class TransactionGrpc {
     }
 
     /**
+     * <pre>
+     * GetRawTransferTransaction retrieves raw details of a transfer transaction.
+     * </pre>
      */
     public void getRawTransferTransaction(pactus.transaction.TransactionOuterClass.GetRawTransferTransactionRequest request,
         io.grpc.stub.StreamObserver<pactus.transaction.TransactionOuterClass.GetRawTransactionResponse> responseObserver) {
@@ -431,6 +480,9 @@ public final class TransactionGrpc {
     }
 
     /**
+     * <pre>
+     * GetRawBondTransaction retrieves raw details of a bond transaction.
+     * </pre>
      */
     public void getRawBondTransaction(pactus.transaction.TransactionOuterClass.GetRawBondTransactionRequest request,
         io.grpc.stub.StreamObserver<pactus.transaction.TransactionOuterClass.GetRawTransactionResponse> responseObserver) {
@@ -439,6 +491,9 @@ public final class TransactionGrpc {
     }
 
     /**
+     * <pre>
+     * GetRawUnBondTransaction retrieves raw details of an unbond transaction.
+     * </pre>
      */
     public void getRawUnBondTransaction(pactus.transaction.TransactionOuterClass.GetRawUnBondTransactionRequest request,
         io.grpc.stub.StreamObserver<pactus.transaction.TransactionOuterClass.GetRawTransactionResponse> responseObserver) {
@@ -447,6 +502,9 @@ public final class TransactionGrpc {
     }
 
     /**
+     * <pre>
+     * GetRawWithdrawTransaction retrieves raw details of a withdraw transaction.
+     * </pre>
      */
     public void getRawWithdrawTransaction(pactus.transaction.TransactionOuterClass.GetRawWithdrawTransactionRequest request,
         io.grpc.stub.StreamObserver<pactus.transaction.TransactionOuterClass.GetRawTransactionResponse> responseObserver) {
@@ -456,6 +514,10 @@ public final class TransactionGrpc {
   }
 
   /**
+   * <pre>
+   * Transaction service defines various RPC methods for interacting with
+   * transactions.
+   * </pre>
    */
   public static final class TransactionBlockingStub extends io.grpc.stub.AbstractBlockingStub<TransactionBlockingStub> {
     private TransactionBlockingStub(
@@ -470,6 +532,10 @@ public final class TransactionGrpc {
     }
 
     /**
+     * <pre>
+     * GetTransaction retrieves transaction details based on the provided request
+     * parameters.
+     * </pre>
      */
     public pactus.transaction.TransactionOuterClass.GetTransactionResponse getTransaction(pactus.transaction.TransactionOuterClass.GetTransactionRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -477,6 +543,10 @@ public final class TransactionGrpc {
     }
 
     /**
+     * <pre>
+     * CalculateFee calculates the transaction fee based on the specified amount
+     * and payload type.
+     * </pre>
      */
     public pactus.transaction.TransactionOuterClass.CalculateFeeResponse calculateFee(pactus.transaction.TransactionOuterClass.CalculateFeeRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -484,6 +554,9 @@ public final class TransactionGrpc {
     }
 
     /**
+     * <pre>
+     * BroadcastTransaction broadcasts a signed transaction to the network.
+     * </pre>
      */
     public pactus.transaction.TransactionOuterClass.BroadcastTransactionResponse broadcastTransaction(pactus.transaction.TransactionOuterClass.BroadcastTransactionRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -491,6 +564,9 @@ public final class TransactionGrpc {
     }
 
     /**
+     * <pre>
+     * GetRawTransferTransaction retrieves raw details of a transfer transaction.
+     * </pre>
      */
     public pactus.transaction.TransactionOuterClass.GetRawTransactionResponse getRawTransferTransaction(pactus.transaction.TransactionOuterClass.GetRawTransferTransactionRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -498,6 +574,9 @@ public final class TransactionGrpc {
     }
 
     /**
+     * <pre>
+     * GetRawBondTransaction retrieves raw details of a bond transaction.
+     * </pre>
      */
     public pactus.transaction.TransactionOuterClass.GetRawTransactionResponse getRawBondTransaction(pactus.transaction.TransactionOuterClass.GetRawBondTransactionRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -505,6 +584,9 @@ public final class TransactionGrpc {
     }
 
     /**
+     * <pre>
+     * GetRawUnBondTransaction retrieves raw details of an unbond transaction.
+     * </pre>
      */
     public pactus.transaction.TransactionOuterClass.GetRawTransactionResponse getRawUnBondTransaction(pactus.transaction.TransactionOuterClass.GetRawUnBondTransactionRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -512,6 +594,9 @@ public final class TransactionGrpc {
     }
 
     /**
+     * <pre>
+     * GetRawWithdrawTransaction retrieves raw details of a withdraw transaction.
+     * </pre>
      */
     public pactus.transaction.TransactionOuterClass.GetRawTransactionResponse getRawWithdrawTransaction(pactus.transaction.TransactionOuterClass.GetRawWithdrawTransactionRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -520,6 +605,10 @@ public final class TransactionGrpc {
   }
 
   /**
+   * <pre>
+   * Transaction service defines various RPC methods for interacting with
+   * transactions.
+   * </pre>
    */
   public static final class TransactionFutureStub extends io.grpc.stub.AbstractFutureStub<TransactionFutureStub> {
     private TransactionFutureStub(
@@ -534,6 +623,10 @@ public final class TransactionGrpc {
     }
 
     /**
+     * <pre>
+     * GetTransaction retrieves transaction details based on the provided request
+     * parameters.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<pactus.transaction.TransactionOuterClass.GetTransactionResponse> getTransaction(
         pactus.transaction.TransactionOuterClass.GetTransactionRequest request) {
@@ -542,6 +635,10 @@ public final class TransactionGrpc {
     }
 
     /**
+     * <pre>
+     * CalculateFee calculates the transaction fee based on the specified amount
+     * and payload type.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<pactus.transaction.TransactionOuterClass.CalculateFeeResponse> calculateFee(
         pactus.transaction.TransactionOuterClass.CalculateFeeRequest request) {
@@ -550,6 +647,9 @@ public final class TransactionGrpc {
     }
 
     /**
+     * <pre>
+     * BroadcastTransaction broadcasts a signed transaction to the network.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<pactus.transaction.TransactionOuterClass.BroadcastTransactionResponse> broadcastTransaction(
         pactus.transaction.TransactionOuterClass.BroadcastTransactionRequest request) {
@@ -558,6 +658,9 @@ public final class TransactionGrpc {
     }
 
     /**
+     * <pre>
+     * GetRawTransferTransaction retrieves raw details of a transfer transaction.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<pactus.transaction.TransactionOuterClass.GetRawTransactionResponse> getRawTransferTransaction(
         pactus.transaction.TransactionOuterClass.GetRawTransferTransactionRequest request) {
@@ -566,6 +669,9 @@ public final class TransactionGrpc {
     }
 
     /**
+     * <pre>
+     * GetRawBondTransaction retrieves raw details of a bond transaction.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<pactus.transaction.TransactionOuterClass.GetRawTransactionResponse> getRawBondTransaction(
         pactus.transaction.TransactionOuterClass.GetRawBondTransactionRequest request) {
@@ -574,6 +680,9 @@ public final class TransactionGrpc {
     }
 
     /**
+     * <pre>
+     * GetRawUnBondTransaction retrieves raw details of an unbond transaction.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<pactus.transaction.TransactionOuterClass.GetRawTransactionResponse> getRawUnBondTransaction(
         pactus.transaction.TransactionOuterClass.GetRawUnBondTransactionRequest request) {
@@ -582,6 +691,9 @@ public final class TransactionGrpc {
     }
 
     /**
+     * <pre>
+     * GetRawWithdrawTransaction retrieves raw details of a withdraw transaction.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<pactus.transaction.TransactionOuterClass.GetRawTransactionResponse> getRawWithdrawTransaction(
         pactus.transaction.TransactionOuterClass.GetRawWithdrawTransactionRequest request) {

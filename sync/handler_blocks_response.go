@@ -56,17 +56,20 @@ func (handler *blocksResponseHandler) PrepareBundle(m message.Message) *bundle.B
 
 func (handler *blocksResponseHandler) updateSession(sid int, code message.ResponseCode) {
 	switch code {
+	case message.ResponseCodeOK:
+		handler.logger.Debug("session accepted. keep session open", "sid", sid)
+		handler.peerSet.UpdateSessionLastActivity(sid)
+
 	case message.ResponseCodeRejected:
 		handler.logger.Debug("session rejected, uncompleted session", "sid", sid)
 		handler.peerSet.SetSessionUncompleted(sid)
-		handler.updateBlockchain()
 
 	case message.ResponseCodeMoreBlocks:
 		handler.logger.Debug("peer responding us. keep session open", "sid", sid)
 		handler.peerSet.UpdateSessionLastActivity(sid)
 
 	case message.ResponseCodeNoMoreBlocks:
-		handler.logger.Debug("peer has no more block. close session", "sid", sid)
+		handler.logger.Debug("peer sent all blocks. close session", "sid", sid)
 		handler.peerSet.SetSessionCompleted(sid) // TODO: test me
 		handler.updateBlockchain()
 

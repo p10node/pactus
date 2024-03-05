@@ -15,7 +15,7 @@ import (
 
 type Server struct {
 	ctx      context.Context
-	cancel   func()
+	cancel   context.CancelFunc
 	config   *Config
 	listener net.Listener
 	address  string
@@ -95,6 +95,7 @@ func (s *Server) startListening(listener net.Listener) error {
 
 func (s *Server) StopServer() {
 	s.cancel()
+	s.logger.Debug("context closed", "reason", s.ctx.Err())
 
 	if s.grpc != nil {
 		s.grpc.Stop()

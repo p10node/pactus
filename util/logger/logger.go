@@ -6,6 +6,7 @@ import (
 	"io"
 	"os"
 	"reflect"
+	"slices"
 
 	"github.com/pactus-project/pactus/util"
 	"github.com/rs/zerolog"
@@ -65,15 +66,13 @@ func getLoggersInst() *logger {
 }
 
 func InitGlobalLogger(conf *Config) {
-	if globalInst == nil {
-		writers := []io.Writer{}
-		// console writer
-		if conf.Colorful {
-			writers = append(writers, zerolog.ConsoleWriter{Out: os.Stderr, TimeFormat: "15:04:05"})
-		} else {
-			writers = append(writers, os.Stderr)
-		}
+	if globalInst != nil {
+		return
+	}
 
+	writers := []io.Writer{}
+
+	if slices.Contains(conf.Targets, "file") {
 		// file writer
 		fw := &lumberjack.Logger{
 			Filename:   LogFilename,
@@ -83,20 +82,29 @@ func InitGlobalLogger(conf *Config) {
 			MaxAge:     conf.RotateLogAfterDays,
 		}
 		writers = append(writers, fw)
-
-		globalInst = &logger{
-			config: conf,
-			subs:   make(map[string]*SubLogger),
-			writer: io.MultiWriter(writers...),
-		}
-		log.Logger = zerolog.New(globalInst.writer).With().Timestamp().Logger()
-
-		lvl, err := zerolog.ParseLevel(conf.Levels["default"])
-		if err != nil {
-			Warn("invalid default log level", "error", err)
-		}
-		log.Logger = log.Logger.Level(lvl)
 	}
+
+	if slices.Contains(conf.Targets, "console") {
+		// console writer
+		if conf.Colorful {
+			writers = append(writers, zerolog.ConsoleWriter{Out: os.Stderr, TimeFormat: "15:04:05"})
+		} else {
+			writers = append(writers, os.Stderr)
+		}
+	}
+
+	globalInst = &logger{
+		config: conf,
+		subs:   make(map[string]*SubLogger),
+		writer: io.MultiWriter(writers...),
+	}
+	log.Logger = zerolog.New(globalInst.writer).With().Timestamp().Logger()
+
+	lvl, err := zerolog.ParseLevel(conf.Levels["default"])
+	if err != nil {
+		Warn("invalid default log level", "error", err)
+	}
+	log.Logger = log.Logger.Level(lvl)
 }
 
 func addFields(event *zerolog.Event, keyvals ...interface{}) *zerolog.Event {
@@ -161,10 +169,10 @@ func NewSubLogger(name string, obj fmt.Stringer) *SubLogger {
 
 func (sl *SubLogger) logObj(event *zerolog.Event, msg string, keyvals ...interface{}) {
 	if sl.obj != nil {
-		addFields(event.Str(sl.name, sl.obj.String()), keyvals...).Msg(msg)
-	} else {
-		addFields(event, keyvals...).Msg(msg)
+		event = event.Str(sl.name, sl.obj.String())
 	}
+
+	addFields(event, keyvals...).Msg(msg)
 }
 
 func (sl *SubLogger) Trace(msg string, keyvals ...interface{}) {

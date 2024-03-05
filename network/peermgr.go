@@ -26,6 +26,8 @@ type peerMgr struct {
 	bootstrapAddrs []lp2ppeer.AddrInfo
 	minConns       int
 	maxConns       int
+	numInbound     int
+	numOutbound    int
 	host           lp2phost.Host
 	peers          map[lp2ppeer.ID]*peerInfo
 	logger         *logger.SubLogger
@@ -53,7 +55,7 @@ func (mgr *peerMgr) Start() {
 	mgr.CheckConnectivity()
 
 	go func() {
-		ticker := time.NewTicker(1 * time.Minute)
+		ticker := time.NewTicker(20 * time.Second)
 		defer ticker.Stop()
 
 		for {
@@ -70,17 +72,33 @@ func (mgr *peerMgr) Start() {
 func (mgr *peerMgr) Stop() {
 }
 
-func (mgr *peerMgr) NumOfConnected() int {
-	mgr.lk.RLock()
-	defer mgr.lk.RUnlock()
-
-	return len(mgr.peers) // TODO: try to keep record of all peers + connected peers
-}
-
-func (mgr *peerMgr) AddPeer(pid lp2ppeer.ID, ma multiaddr.Multiaddr, direction lp2pnet.Direction,
+func (mgr *peerMgr) AddPeer(pid lp2ppeer.ID, ma multiaddr.Multiaddr,
+	direction lp2pnet.Direction,
 ) {
 	mgr.lk.Lock()
 	defer mgr.lk.Unlock()
+
+	mgr.addPeer(pid, ma, direction)
+}
+
+func (mgr *peerMgr) addPeer(pid lp2ppeer.ID, ma multiaddr.Multiaddr,
+	direction lp2pnet.Direction,
+) {
+	_, exists := mgr.peers[pid]
+	if exists {
+		return
+	}
+
+	switch direction {
+	case lp2pnet.DirInbound:
+		mgr.numInbound++
+
+	case lp2pnet.DirOutbound:
+		mgr.numOutbound++
+
+	case lp2pnet.DirUnknown:
+		//
+	}
 
 	mgr.peers[pid] = &peerInfo{
 		MultiAddress: ma,
@@ -91,6 +109,28 @@ func (mgr *peerMgr) AddPeer(pid lp2ppeer.ID, ma multiaddr.Multiaddr, direction l
 func (mgr *peerMgr) RemovePeer(pid lp2ppeer.ID) {
 	mgr.lk.Lock()
 	defer mgr.lk.Unlock()
+
+	mgr.removePeer(pid)
+}
+
+func (mgr *peerMgr) removePeer(pid lp2ppeer.ID) {
+	peerInfo, exists := mgr.peers[pid]
+	if !exists {
+		mgr.logger.Warn("unable to find a peer", "pid", pid)
+
+		return
+	}
+
+	switch peerInfo.Direction {
+	case lp2pnet.DirInbound:
+		mgr.numInbound--
+
+	case lp2pnet.DirOutbound:
+		mgr.numOutbound--
+
+	case lp2pnet.DirUnknown:
+		//
+	}
 
 	delete(mgr.peers, pid)
 }
@@ -113,8 +153,6 @@ func (mgr *peerMgr) CheckConnectivity() {
 	mgr.lk.Lock()
 	defer mgr.lk.Unlock()
 
-	mgr.logger.Debug("check connectivity", "peers", len(mgr.peers))
-
 	net := mgr.host.Network()
 
 	// Let's check if some peers are disconnected
@@ -123,20 +161,27 @@ func (mgr *peerMgr) CheckConnectivity() {
 		connectedness := net.Connectedness(pid)
 		if connectedness == lp2pnet.Connected {
 			connectedPeers = append(connectedPeers, pid)
+		} else {
+			mgr.removePeer(pid)
 		}
 	}
 
-	if len(connectedPeers) > mgr.maxConns {
+	mgr.logger.Debug("check connectivity",
+		"peers", len(connectedPeers),
+		"inbound", mgr.numInbound,
+		"outbound", mgr.numOutbound)
+
+	switch {
+	case len(connectedPeers) > mgr.maxConns:
 		mgr.logger.Debug("peer count is about maximum threshold",
-			"count", len(connectedPeers),
+			"count", connectedPeers,
 			"max", mgr.maxConns)
 
 		return
-	}
 
-	if len(connectedPeers) < mgr.minConns {
+	case len(connectedPeers) < mgr.minConns:
 		mgr.logger.Info("peer count is less than minimum threshold",
-			"count", len(connectedPeers),
+			"count", connectedPeers,
 			"min", mgr.minConns)
 
 		for _, ai := range mgr.bootstrapAddrs {
@@ -157,4 +202,18 @@ func (mgr *peerMgr) CheckConnectivity() {
 			ConnectAsync(mgr.ctx, mgr.host, ai, mgr.logger)
 		}
 	}
+}
+
+func (mgr *peerMgr) NumInbound() int {
+	mgr.lk.RLock()
+	defer mgr.lk.RUnlock()
+
+	return mgr.numInbound
+}
+
+func (mgr *peerMgr) NumOutbound() int {
+	mgr.lk.RLock()
+	defer mgr.lk.RUnlock()
+
+	return mgr.numOutbound
 }

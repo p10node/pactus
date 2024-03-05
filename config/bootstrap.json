@@ -45,7 +45,7 @@
         "name": "JohnVNBnode",
         "email": "quynhgiangtranle@gmail.com",
         "website": "docs.vnbnode.com",
-        "address": "/ip4/62.171.130.196/tcp/21888/p2p/12D3KooWNSiLJejwiG5Hk726TGyXPATFsYeKvarKgNpyjMiKupDH"
+        "address": "/ip4/62.171.130.196/tcp/21888/p2p/12D3KooWHvTVCcGqqYRnAexgE1VGqXiGAZd9vuLGs4YgGtHmRucN"
     },
     {
         "name": "NodeSync_Top",
@@ -151,7 +151,7 @@
     },
     {
         "name": "0xSown",
-        "email": "vtson2707@@gmail.com",
+        "email": "vtson2707@gmail.com",
         "website": "n/a",
         "address": "/ip4/84.247.184.95/tcp/21888/p2p/12D3KooWSjp5GFmCCsYkKcqicrghyHqfjdDCfLfgfqWmG5JTQSDu"
     },
@@ -178,5 +178,191 @@
         "email": "Stiluckyy@gmail.com",
         "website": "n/a",
         "address": "/ip4/5.180.151.35/tcp/21888/p2p/12D3KooWLCPgwGcEJemetBu7mCWyPaRMBKCaUu2iRdmw4ydT3ryo"
+    },
+    {
+        "name": "Toncatuyvu",
+        "email": "Toncatuyvu@gmail.com",
+        "website": "n/a",
+        "address": "/ip4/109.123.240.5/tcp/21888/p2p/12D3KooWJM6tRpWbVxuoDiLg1bDPoCZMX17gqRNDjPEEA7Vj2Ddz"
+    },
+    {
+        "name": "TPES",
+        "email": "duongbo8648@gmail.com",
+        "website": "https://tpes.com.vn",
+        "address": "/ip4/75.119.159.113/tcp/21888/p2p/12D3KooWL7nUsmd7JNrhrfbBjg6JxPFiZA5LXbdCDPnw5Xpdp4a9"
+    },
+    {
+        "name": "toanbm",
+        "email": "buiminhtoan1985@gmail.com",
+        "website": "",
+        "address": "/ip4/161.97.145.100/tcp/21888/p2p/12D3KooWCjZ35Hu8Mt5GjZ6fJzJBZuUSsAppAzXcbMcXkswR4HrU"
+    },
+    {
+        "name": "Wanderersg2014",
+        "email": "wanderersg2014@gmail.com",
+        "website": "n/a",
+        "address": "/ip4/109.123.253.88/tcp/21888/p2p/12D3KooWPFUshoRYHcw281vmuKv8kPoXF2GZUW6incQ7wU1jgzQa"
+    },
+    {
+        "name": "node-life",
+        "email": "vminairdrop1@gmail.com",
+        "website": "",
+        "address": "/ip4/167.86.80.169/tcp/21888/p2p/12D3KooWDqAPjeRR41GYoQw9RQaSZdFx59k3SpkR29yAycpJUhfF"
+    },
+    {
+        "name": "DRAGON",
+        "email": "kiritovn14788@gmail.com",
+        "website": "",
+        "address": "/ip4/65.21.69.53/tcp/21888/p2p/12D3KooWQ1izUE5jcmMyjmxRdb2CmASe8Nfn81UL2G5rYjptC2RV"
+    },
+    {
+        "name": "VALIDATOR.WIKI",
+        "email": "admin@validator.wiki",
+        "website": "https://www.validator.wiki/",
+        "address": "/dns/pactus-bootstrap.validator.wiki/tcp/21888/p2p/12D3KooWBC5YQJdRAvupSXUPNYHiSctzZeTPNzen1JsRwj9aEyYZ"
+    },
+    {
+        "name": "SumNode",
+        "email": "thanhsum@gmail.com",
+        "website": "",
+        "address": "/ip4/157.90.22.45/tcp/21888/p2p/12D3KooWLUYJ55DyJjSZvwPJDQNVYSBYqiMxJ9bFzRcVBgvSkN9L"
+    },
+    {
+        "name": "bettevinup",
+        "email": "neitheryounorme1@gmail.com",
+        "website": "n/a",
+        "address": "/ip4/65.21.152.153/tcp/21888/p2p/12D3KooWCirKBMmhmL6a4Ng5TVHQ4Leb6Wfj4M8s9raUzdFQn5aP"
+    },
+    {
+        "name": "BlockSync",
+        "email": "topwelder2015@gmail.com",
+        "website": "",
+        "address": "/ip4/128.140.103.90/tcp/21888/p2p/12D3KooWN4eypkp61j12SMSkmrEfQv4RjnggmRfcEfom4mcKUpsR"
+    },
+    {
+        "name": "hainguyen0094_22439",
+        "email": "nth1686@hotmail.com",
+        "website": "",
+        "address": "/ip4/185.216.75.142/tcp/21888/p2p/12D3KooWNjYFZpq5YwdUC6JgHfkZhUY7SyxTAQCHrdNwf2t1FXSn"
+    },
+    {
+        "name": "duyenhtm",
+        "email": "myduyenht1501@gmail.com",
+        "website": "",
+        "address": "/ip4/85.190.246.251/tcp/21888/p2p/12D3KooWFEm9ZNxthmR3bJKe5RCS9rjw2wLL1FYRAh251KNvpnQM"
+    },
+    {
+        "name": "minhtoanbui135",
+        "email": "toanbm.test02@gmail.com",
+        "website": "n/a",
+        "address": "/ip4/45.134.226.48/tcp/21888/p2p/12D3KooWP9dFS5QdSCZaPYVrcpXf5YbNyon5RchLohMVYUxZJZgZ"
+    },
+    {
+        "name": "NodeOps",
+        "email": "admin@nodeops.dev",
+        "website": "https://nodeops.dev/",
+        "address": "/ip4/154.38.187.40/tcp/21888/p2p/12D3KooWQyt7JCyhhnZ8jyT1vso4GGYVbpJhoXJy5KRpnqa8DmPg"
+    },
+    {
+        "name": "hope3387",
+        "email": "phuocchunginvestor@gmail.com",
+        "website": "n/a",
+        "address": "/ip4/194.163.164.10/tcp/21888/p2p/12D3KooWDRFCW5ksbnn6Uq7kx3HZt3EnrKjujqqs8QBQmA7TK5o6"
+    },
+    {
+        "name": "5t0q6pr",
+        "email": "nth1686@gmail.com",
+        "website": "n/a",
+        "address": "/ip4/167.86.116.61/tcp/21888/p2p/12D3KooWAijtinK9cepHGQF7vYGHQ9jLrYhfoTMdJzK9xeKuxChK"
+    },
+    {
+        "name": "00PactucValidator32",
+        "email": "evpc77@gmail.com",
+        "website": "n/a",
+        "address": "/ip4/46.196.214.35/tcp/21888/p2p/12D3KooWJ3H7YAyemqxtToG6yRRzTfLdZD3eJk2xsQRaKxfdNhKf"
+    },
+    {
+        "name": "anpjwq",
+        "email": "hain64341@gmail.com",
+        "website": "n/a",
+        "address": "/ip4/42.117.247.180/tcp/21888/p2p/12D3KooWLVZSkgkFgrRNMfkCtULqtErYcNgjqgueeH944vDpDCPv"
+    },
+    {
+        "name": "Vozer",
+        "email": "airdropdata7@gmail.com",
+        "website": "voz.vn",
+        "address": "/ip4/38.242.225.172/tcp/21888/p2p/12D3KooWDTP7CKGvbcg5WiuKB2Bt4acf2LWMdbUjMqU63dKKCVMB"
+    },
+    {
+        "name": "Khacbao",
+        "email": "khacbao114@gmail.com",
+        "website": "n/a",
+        "address": "/ip4/167.86.121.11/tcp/21888/p2p/12D3KooWMpVXMQkr26ff3y8gC5z1h9RZNxTvW4WzZBML8GHHUoL5"
+    },
+    {
+        "name": "Thomas Jr",
+        "email": "catsmile91@gmail.com",
+        "website": "catsmile.tech",
+        "address": "/ip4/194.163.189.255/tcp/21888/p2p/12D3KooWF54PkAE34dRkC3WaiAgpL7HMnRFi1nW8iPnSH8nKLtZ9"
+    },
+    {
+        "name": "Winnode",
+        "email": "maladarsih@gmail.com",
+        "website": "winnode.site",
+        "address": "/ip4/37.60.245.47/tcp/21888/p2p/12D3KooWBH27VEPdGBYzq1vYciRgnDn3ozStRaUYd2vJWGgaKEUZ"
+    },
+    {
+        "name": "F2Node",
+        "email": "lochua3989@gmail.com",
+        "website": "n/a",
+        "address": "/ip4/84.247.172.23/tcp/21888/p2p/12D3KooWFJYk55mUD6FR9Gx2YGQ34PYziwTQhY1kZ3TMS6fGUz6g"
+    },
+    {
+        "name": "SumNode",
+        "email": "thanhsum@gmail.com",
+        "website": "",
+        "address": "/ip4/95.216.222.135/tcp/21888/p2p/12D3KooWHicbZ3dBnR7JaVKr4U7WNUWyhDnUn2TwMVmPqW8Ftqop"
+    },
+    {
+        "name": "Sipannachi",
+        "email": "sipannachi@gmail.com",
+        "website": "",
+        "address": "/ip4/65.109.143.78/tcp/21888/p2p/12D3KooWPnWgEFV32cvpfuv98oioZQJJKvRM46BEsFaoXYijvgvc"
+    },
+    {
+        "name": "JackieLuong135",
+        "email": "jackieluong135@gmail.com",
+        "website": "",
+        "address": "/ip4/116.203.238.65/tcp/21888/p2p/12D3KooWKf32k9dLE4fA5tkh4KvvEAQDmHxHLWiahjpt2Hfx3d88"
+    },
+    {
+        "name": "Lisachoake",
+        "email": "mohamed.solamina@gmail.com",
+        "website": "",
+        "address": "/ip4/49.13.27.37/tcp/21888/p2p/12D3KooWPSh9KMa6tRfSewK3sUC4BDSPnXseVDGJxWqNZxKcXnGM"
+    },
+     {
+        "name": "Sury",
+        "email": "lyminhhai102@gmail.com",
+        "website": "",
+        "address": "/ip4/37.60.241.89/tcp/21888/p2p/12D3KooWMZtkk5HS69ukYYdfxD3CgBgTtKZg7kv43mCz1HMrDnQw"
+    },
+    {
+        "name": "Razizi",
+        "email": "sumtran.dev@gmail.com",
+        "website": "",
+        "address": "/ip4/195.201.112.164/tcp/21888/p2p/12D3KooWKiYGT4mCapgcqLPSwbkJY1KgZMW5hdC8XJMQSU23tiSL"
+    },
+    {
+        "name": "hainguyen0094_22439",
+        "email": "nth1686@hotmail.com",
+        "website": "",
+        "address": "/ip4/94.72.120.50/tcp/21888/p2p/12D3KooWQ6rsLNG1RpkkeLQj1HeqthYEuouDN8b7PnX4cMboYe6k"
+    },
+    {
+        "name": "anpjwq",
+        "email": "hain64341@gmail.com",
+        "website": "n/a",
+        "address": "/ip4/95.111.242.225/tcp/21888/p2p/12D3KooWRNTZpo1XNWKQx2Z5HEu5RnqKeNDV5y4qMKX5f4aLtbv9"
     }
 ]
